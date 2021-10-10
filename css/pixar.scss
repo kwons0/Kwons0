@@ -1,0 +1,147 @@
+@charset 'utf-8';
+@import '_common.scss';
+
+
+.detail{ @include detail(#5f52c5); }
+.contit{ @include contit(#5f52c5); }
+
+
+.right{ width: 65%;
+    div:nth-of-type(2){
+        a:nth-of-type(1){ background: #6a60bb !important; }
+    }
+}
+
+// ================== 기능1, 기능2 ==========================
+// =======================================================
+.row1{
+    @include conWid(0);
+    .line1{ //라우터돔
+        @include flex();
+        > div{  width: 65%; }
+    }
+    .line2{ //제이슨
+        padding-top: 100px;
+        @include flex();
+        div:nth-of-type(1){
+            width: 65%; height: 400px;
+            @include bgimg('../img/pixar_img1.jpg');
+            background-attachment:fixed;
+        }
+    }
+}
+
+// ================== 기능3~6(검정배경) ====================
+// =====================================================
+
+.row2{
+    .line3{ width: 100%; margin-top: 120px; font-size : 0px;
+        div{ font-size: 0; border: none}
+    }
+    .insertBg{
+        margin-top: -2px;
+        @include bgimg('../img/pixar_back1.jpg');
+        .contit{
+            h2{ color: white; } 
+            p{ color: white; @include font(15px, 300);
+                b{ color: #aea4ff; @include font(15px, 300);
+                    // border-bottom: 1px solid rgba(#a59bf6, 0.5);
+                }
+            } 
+        }
+        .line3-1{ // improvement 캐릭터
+            @include conWid(0);
+            figure{
+                @include flex();
+                p{ width: 49%; padding-top: 40px;
+                    img{ width: 100%;}
+                }
+            }
+            .contit{ 
+                @include flex( flex-start, space-between); 
+                width: 100%; padding-top: 40px;
+                h2{ padding-bottom: 5px;
+                    border-bottom: 2px solid white; 
+                }
+                p{ width: 60%}
+            }
+        }
+        > article{ //서치
+            @include flex(flex-start,space-between); @include conWid(30px);
+            h2{ padding-bottom: 5px;
+                border-bottom: 2px solid white;
+            }
+            p{ width: 60%; @include font(15px, 300);}
+        }
+        .line4{ // 티저영상
+            @include flex(); @include conWid();
+            > div{ width: 65%;}
+        }
+        .line5{ //서치
+            @include conWid();
+            video{ display: block;}
+            .contit{ 
+                @include flex( flex-start, space-between); 
+                width: 100%; padding-top: 40px;
+                h2{ padding-bottom: 5px;
+                    border-bottom: 2px solid white; 
+                }
+                p{ width: 60%}
+            }
+        }
+        .line6{ //단편 팝업
+            @include conWid(); padding-bottom: 120px;
+            @include flex( flex-start, space-between);
+            position: relative;
+            > div{
+                width: 65%;
+                p{ padding-top: 15px; img{width: 100%;}}
+            }
+            .contit{
+                padding: 80px 0;
+                position: sticky; left: 65%; top: 150px;
+            }
+        }
+    }
+}
+
+// ================== 기능7~8(흰배경) ====================
+// =====================================================
+
+.row3{
+    @include bgimg('../img/pixar_back2.jpg');
+    .line7{
+        padding-top: 130px;
+        div{ position: relative;
+            overflow-x: hidden;
+            .slmov{ 
+                position: absolute; right: -10%; top: 25%;
+                width: 100%;
+            }
+        }
+        p{ img{ width: 100%}}
+        .contit{
+            @include flex(flex-start,space-between);
+            width: 60%; margin: 0 auto;
+            padding-top: 40px;
+            p{ width: 65%; }
+        }
+    }
+    .line8{
+        padding: 130px 0;  @include flex();
+        video{ width: 60%; }
+        .contit{ width: 25%; margin: 0 10% 0 5%}
+    }
+}
+footer{
+    @include nextFooter();
+}
+
+
+
+
+
+
+@media(max-width: 1280px){
+
+}

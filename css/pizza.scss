@@ -1,0 +1,126 @@
+@charset 'utf-8';
+@import '_common.scss';
+
+
+body{ transition: background-color 1000ms linear;}
+.detail{ @include detail(#d91a33); }
+.contit{ @include contit(#a40b20); }
+
+// =========== 메인. 기능1,2,3 ==========================
+// ====================================================
+
+.row1{ @include conWid(0); 
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1)
+}
+.row2{
+    .line1{
+        @include conWid(); @include flex();
+        div{ width: 55%; img{ width: 100%;}}
+    }
+    .line2{
+        @include conWid(); @include flex();
+        div{ width: 65%;
+            border: 20px solid #f1f1f1;
+        }
+    }
+    .line3{ // swiper plugin
+        width: 100%; @include flex();
+        padding: 130px 0;
+        .contit{
+            width: 30%;  padding-left: 12.5%;
+        }
+        
+        > div{ width: 65%; padding: 140px 0;
+            position: relative; overflow: hidden;
+            > figure{
+                border-left: 20px solid #f1f1f1;
+                img{ width: 100%;}
+            }
+            > p{ width: 170px;
+                position: absolute; left: 50%; bottom: 18%; transform: translateX(-50%);
+                img{width: 100%;}
+            }
+            .swipePz{
+                position: absolute; left: 56%; bottom: 100px; transform: translateX(-50%);
+                p{ width: 70%; margin-bottom: 60px;
+                    img{width: 100%;}
+                }
+            }
+        }
+    }
+}
+.row3{
+    padding-bottom: 130px;
+    > div:nth-of-type(1){ width: 100%; }
+    .contit{
+        @include conWid(30px); @include flex(flex-start, space-between);
+        h2{ color: white; padding-bottom: 5px; border-bottom: 2px solid white; }
+        p{ color: white; @include font(15px, 300); 
+            b{ color: white; @include font(15px, 300);
+                border-bottom: 2px solid rgba(white, 0.7);
+            }
+        }
+    }
+    .improv{
+        @include conWid(); @include flex();
+        div{ @include flex(flex-end, space-between);
+            width: 60%; text-align: center;
+            figure{ 
+                &:nth-of-type(1){padding-right:20px;}
+                p{ border-radius: 20px; overflow: hidden;
+                    box-shadow: 5px 5px 20px rgba(#510e17, 0.9);
+                    img{width: 100%;}
+                }
+                figcaption{ 
+                    @extend %fontTi; @include font( 20px, 600);
+                    background: white; padding: 10px 50px;
+                    display: inline-block;
+                    margin-top: 20px; border-radius: 30px;
+                    color: #d91a33;
+                    box-shadow: 5px 5px 20px rgba(#510e17, 0.9);
+                }
+            }
+        }
+
+        h2{ width: 35%; color: white;
+            line-height: 1.8; @include font(16px, 300);
+            white-space: pre-line; 
+            b{ color: white; @include font(15px, 300);
+                border-bottom: 2px solid rgba(white, 0.7);
+            }
+        }
+    }
+}
+.row4{
+    @include bgimg('../img/pizza_back.jpg');
+    padding: 130px 0;
+    .line5{
+        @include conWid(0);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    }
+    .line6{
+        @include conWid(); 
+        @include flex(flex-start, space-between);
+        .contit{ 
+            padding: 80px 0;
+            position: sticky; left: 0; top: 130px;
+        }
+        div{ width: 65%; img{ width: 100%;}}
+    }
+    .line7{
+        width: 100%; padding-top: 130px;
+        .contit{
+            @include conWid(30px); width: 70%;
+            @include flex(flex-start, space-between);
+        }
+    }
+    .line8{
+        @include conWid(); @include flex();
+        div{ width: 65%;
+            border: 20px solid #f1f1f1;
+        }
+    }
+}
+footer{
+    @include nextFooter('../img/market_main2.jpg');
+}

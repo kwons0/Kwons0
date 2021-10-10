@@ -1,0 +1,171 @@
+@charset 'utf-8';
+@import '_common.scss';
+
+body{ overflow: hidden; transition: background-color 500ms linear; }
+.contact{
+    width: 75%; height: 100vh;
+    margin: 0 auto;
+    @include flex( center,space-between);
+    position: relative;
+    .come{
+        h2{
+            @include font(70px,200);
+            white-space: pre-line;
+            line-height: 1.5;
+            b{
+                @include font(70px,400)
+            }
+        }
+        div{
+            @include font(24px, 300);
+            white-space: pre-line;
+            padding-top: 30px;
+            line-height: 1.5;
+            b{
+                @include font(24px, 500);
+            }
+        }
+    }
+    .five{ padding-top: 320px;
+        a{  
+            @include flex(); padding: 7px 0; transition: .5s;
+            cursor: pointer;
+            &:hover div{ color: $color}
+            div{
+                @include font(16px, 400); color:rgb(119, 119, 119);
+                width: 220px;
+            }
+
+            p{ width: 25px; height: 25px; transition: .5s;}
+            &:nth-of-type(1) p{  @include bgimg();}
+            &:nth-of-type(2) p{  @include bgimg('../img/icon_phone1.png');}
+            &:nth-of-type(3) p{  @include bgimg('../img/icon_git1.png');}
+            &:nth-of-type(4) p{  @include bgimg('../img/icon_kakao1.png');}
+            &:nth-of-type(5) p{  @include bgimg('../img/icon_insta1.png');}
+
+            &:nth-of-type(1):hover p{ @include bgimg('../img/icon_mail2.png'); }
+            &:nth-of-type(2):hover p{ @include bgimg('../img/icon_phone2.png'); }
+            &:nth-of-type(3):hover p{ @include bgimg('../img/icon_git2.png'); }
+            &:nth-of-type(4):hover p{ @include bgimg('../img/icon_kakao2.png'); }
+            &:nth-of-type(5):hover p{ @include bgimg('../img/icon_insta2.png'); }
+
+        }
+    }
+    .scroll-prompt {
+        position: absolute;
+        top: 90vh; left: 50%; transform: translateX(-50%);
+        width: 160px; height: 100px;
+    
+        .scroll-prompt-arrow-container {
+            position: absolute;
+            top: 0; left: 50%; transform: translateX(-50%);
+            animation: bounce 1.5s infinite;
+        }
+        .scroll-prompt-arrow {
+            animation: opaci 1.5s infinite;
+        }
+        .scroll-prompt-arrow:last-child {
+            animation-direction: reverse;
+            margin-top: -15px;
+        }
+        .scroll-prompt-arrow > div {
+            width: 30px; height: 30px;
+            border-right: 2px solid #bebebe;
+            border-bottom: 2px solid #bebebe;
+            transform: rotate(45deg) translateZ(1px);
+        }
+    }
+    
+}
+.submit{
+    // background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    
+    div{
+        width: 75%; height: 100vh; margin: 0 auto;
+        @include flex(flex-end,space-between); 
+        article{
+            padding-top: 130px; width: 40%;
+            height: 100vh;
+            h2{
+                @include font(50px,200);
+                white-space: pre-line;
+                line-height: 1.5;
+                color: white;
+                b{
+                    @include font(50px,400);
+                    color: $color;
+                }
+            }
+            p{
+                @include font(19px, 300);
+                white-space: pre-line;
+                padding-top: 20px;
+                color: rgb(200, 200, 200);
+                b{
+                    @include font(19px, 300);
+                    color: $color;
+                }
+            }
+        }
+        form{
+            width: 50%; padding-bottom: 50px; 
+            position: relative;
+            ul{
+                li{ margin: 10px 0;
+                    input{
+                        width: 100%; border: none;
+                        border-bottom: 2px solid rgb(49, 49, 49);
+                        background: none; color: white;
+                        @include font( 16px, 300);
+                        padding: 15px 20px;
+                        // &:nth-of-type(2n){ margin-left: 20px;}
+                        &::placeholder{ color: #aaa; @include font( 16px, 300)}
+                        &:focus{
+                            outline: none;
+                            border-bottom: 2px solid $color;
+                        }
+                    }
+                    textarea{ 
+                        width: 100%; height: 180px; background: none;
+                        resize: none; padding: 20px; margin: 20px 0 10px 0;
+                        color: white; @include font( 16px, 300);
+                        border: 2px solid rgb(49, 49, 49);
+                        @include font( 16px, 400);
+                        &::placeholder{ color: #aaa; @include font( 16px, 300)}
+                        &:focus{
+                            outline: none;
+                            border: 2px solid $color;
+                        }
+                    }
+                    button{ 
+                        background-color: $color;
+                        width: 100%; border: none;
+                        @include font(15px,500);
+                        @extend %fontTi; color: white;
+                        padding: 10px 0; transition: .5s;
+                        &:hover{ background-color: #0a57bb;}
+                    }
+                }
+            }
+            .thankyou_message{
+                height: 30px; width: 100%; display: none
+            }
+        }
+    }
+
+}
+
+
+footer{
+    @include nextFooter();
+    height: 200px;
+    > a{
+        background-image: none;
+        background-color: #000000;
+        article{
+            small{ @include font(15px, 300); text-shadow: none; }
+            h2{  @include font(40px, 400); text-shadow: none;}
+        }
+    }
+}

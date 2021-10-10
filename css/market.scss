@@ -1,0 +1,220 @@
+@charset 'utf-8';
+@import '_common.scss';
+
+body{ transition: background-color 1000ms linear;}
+.detail{ @include detail(#0088e7); }
+.contit{ @include contit(#0088e7); }
+
+.start{
+    figcaption{ @include font(65px, 400);}
+}
+
+.row1{
+    width: 100%; overflow-x: hidden;
+    padding-bottom: 100px;
+    @include bgimg('../img/market_bg1.jpg');
+    .line1{
+        @include conWid(0);
+        white-space: pre-line;
+        line-height: 1.5;
+        h2{ @include font(30px, 600); 
+            > b{ @include font(30px, 600); color: #0088e7; }
+        }
+        p{ @include font(15px, 300);
+            > b{ @include font(15px, 500); }
+        }
+    }
+    div{
+        width: 90%; margin: 50px 0 0 30%;
+        img{ width: 100%;}
+    }
+}
+
+.row2{
+    figure{ width: 100%; img{width: 100%} }
+    .contit{
+        width: 50%; margin: 0 auto;
+        padding: 50px 0 20px 0;
+    }
+    .line2{
+        width: 50%; margin: 0 auto;
+        position: relative;
+        li:nth-of-type(1){ 
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+            background: #333333; border-radius: 20px;
+            width: 250px; height: 450px;
+            overflow: hidden;
+            position: absolute; right: 0; top: -80%;
+            > p{  width: 240px; height: 440px; margin: 5px auto;
+                border-radius: 15px; overflow: hidden;
+                img{width: 100%; margin: 0 auto;
+                }
+            }
+        }
+        li:nth-of-type(2){ 
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+            background: #333333; border-radius: 20px;
+            width: 100%; height: 600px; padding: 10px;
+            overflow: hidden;
+            > p{  width: 100%; height: 580px;
+                border-radius: 15px; overflow: hidden;
+                img{width: 100%;}
+            }
+        }
+    }
+}
+.row3{
+    @include bgimg('../img/market_bg2.png');
+    padding: 130px 0 100px 0;
+    width: 100%;
+    .line3{
+        @include flex();
+        li:nth-of-type(1){ 
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+            margin-left: -10%;
+            background: #333333; border-radius: 20px;
+            width: 50%; height: 600px; padding: 5px;
+            overflow: hidden;
+            > p{  width: 100%; height: 590px;
+                border-radius: 15px; overflow: hidden;
+                img{width: 100%;}
+            }
+        }
+        li:nth-of-type(2){ 
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+            background: #333333; border-radius: 20px;
+            width: 250px; height: 450px;
+            overflow: hidden;
+            > p{  width: 240px; height: 440px; margin: 5px auto;
+                border-radius: 15px; overflow: hidden;
+                img{width: 100%; margin: 0 auto;}
+            }
+        }
+        .contit{
+            width: 35%; padding-right: 10%;
+        }
+    }
+}
+
+
+.row4{
+    width: 100%; height: 80vh;
+    @include bgimg('../img/market_img7.jpg');
+    background-attachment:fixed;
+}
+
+.row5{
+    @include conWid();
+    > div{ width: 100%; img{width: 100%;}}
+    .line4{
+        li{ width: 100%; margin: 30px 0;
+            position: relative;
+            p:nth-of-type(1){
+                width: 100%; img{ width: 100%;}
+            }
+            p:nth-of-type(2){ animation: store 2s infinite alternate; }
+            p:nth-of-type(3){ animation: store 2s infinite alternate; }
+            @keyframes store {
+                0%{ opacity: 0;}
+                100%{ opacity: 1;}
+            }
+        }
+        li:nth-of-type(1){
+            p:nth-of-type(2){
+                position: absolute; left: 0; top: 0;
+                width: 32%;
+                img{ width: 100%;}
+            }
+            p:nth-of-type(3){
+                position: absolute; right: 0; top: 0;
+                width: 32%;
+                animation-delay: 1.8s;
+                img{ width: 100%;}
+            }
+        }
+        li:nth-of-type(2){
+            p:nth-of-type(2){
+                position: absolute; right: 50%; top: 0;
+                transform: translateX(50%);
+                animation-delay: 1.3s;
+                width: 32%;
+                img{ width: 100%;}
+            }
+            p:nth-of-type(3){
+                position: absolute; right: 0; top: 0;
+                animation-delay: 2s;
+                width: 32%;
+                img{ width: 100%;}
+            }
+        }
+    }
+    .contit{
+        width: 92%; margin: 0 auto; padding-top: 40px;
+        @include flex(flex-start, space-between);
+    }
+}
+
+.row6{
+    overflow-x: hidden;
+    .line5{ // 뉴스 스와이프
+        @include conWid();
+        @include flex(flex-start, space-between);
+        width: 70%;
+        div{ width: 45%;
+            position: relative;
+            p:nth-of-type(1){
+                img{ width: 100%;}
+            }
+            p:nth-of-type(2){
+                position: absolute; left: 40px; bottom: 26%;
+                height: 30%;
+                img{ height: 100%;}
+            }
+            span{
+                width: 84%; height: 4px;
+                background: rgb(203, 203, 203);
+                position: absolute; left: 40px; bottom: 23%;
+                &:nth-of-type(2){
+                    background: #0088e7;
+                    width: 10%;
+                }
+            }
+        }
+        .contit{ width: 45%;
+            padding: 80px 0;
+        }
+    }
+}
+
+.row7{
+    @include bgimg('../img/market_bg3.jpg');
+    padding-bottom: 130px;
+    margin-bottom: 100px;
+    .line6{
+        @include conWid();
+        @include flex();
+        height: 60vh;
+        .contit{
+            width: 35%;
+        }
+        .mark{
+            width: 60%; height: 60vh;
+            position: relative;
+            img{ width: 100%;}
+            p{ box-shadow: 5px 5px 15px rgba(0,0,0,0.3); border-radius: 50%;}
+            p:nth-of-type(1){  position: absolute; left: 15%; top: 70%; width: 160px;}
+            p:nth-of-type(2){  position: absolute; left: 85%; top: 0%; width: 170px;}
+            p:nth-of-type(3){  position: absolute; left: 65%; top: 10%; width: 100px;}
+            p:nth-of-type(4){  position: absolute; left: 50%; top: 70%; width: 130px;}
+            p:nth-of-type(5){  position: absolute; left: 75%; top: 45%; width: 200px;}
+            p:nth-of-type(6){  position: absolute; left: 35%; top: 30%; width: 160px;}
+        }
+    }
+
+    
+}
+
+
+footer{
+    @include nextFooter('../img/star_main2.jpg');
+}
