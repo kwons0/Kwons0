@@ -41,7 +41,7 @@ video {
   font-weight: 400;
 }
 
-.start figcaption, header .h .menu > div span a, .mail div p b, footer a article h2 {
+.start figcaption, header .h .menu > div span a, .mail div > a p b, footer a article h2 {
   font-family: 'Rozha One', serif;
   font-weight: 400;
 }
@@ -566,6 +566,11 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
 
 .mail div {
   cursor: pointer;
+}
+
+.mail div > a {
+  display: block;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,7 +582,7 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
           justify-content: center;
 }
 
-.mail div p {
+.mail div > a p {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 3px;
@@ -585,13 +590,13 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
   transition: .5s;
 }
 
-.mail div p b {
+.mail div > a p b {
   font-size: 19px;
   font-weight: 500;
   color: #1a73e8;
 }
 
-.mail div a {
+.mail div > a figure {
   width: 18px;
   height: 18px;
   margin: 4px 0 0 10px;
@@ -604,11 +609,11 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
   background-size: cover;
 }
 
-.mail div:hover p {
+.mail div:hover a p {
   color: #1a73e8;
 }
 
-.mail div:hover a {
+.mail div:hover > a figure {
   background-image: url("../img/icon_mail2.png");
   background-repeat: no-repeat;
   background-position: center top;
@@ -621,11 +626,11 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
   transition: .5s;
 }
 
-.mail.black div p {
+.mail.black div a p {
   color: white;
 }
 
-.mail.black div a {
+.mail.black div a figure {
   background-image: url("../img/icon_contact2.png");
   background-repeat: no-repeat;
   background-position: center top;
@@ -636,7 +641,7 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
   opacity: 1;
 }
 
-.mail.black div:hover a {
+.mail.black div:hover a figure {
   background-image: url("../img/icon_mail2.png");
   background-repeat: no-repeat;
   background-position: center top;

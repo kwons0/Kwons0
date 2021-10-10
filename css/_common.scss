@@ -314,23 +314,28 @@ header{ position: fixed; z-index: 30;
     position: fixed; right: 2%; top: 200px;
     transform: rotate(90deg); 
     div{cursor: pointer;
-        @include flex(flex-start,center);
-        p{ @include font(14px, 400); letter-spacing: 3px; transition: .5s;
-            b{ @extend %fontEn; @include font(19px, 500); color:$color; }
+        > a{ display: block; cursor: pointer;
+            @include flex(flex-start,center);
+            p{ @include font(14px, 400); letter-spacing: 3px; transition: .5s;
+                b{ @extend %fontEn; @include font(19px, 500); color:$color; }
+            }
+            figure{ width:18px; height: 18px; margin:4px 0 0 10px;
+                display: block; transition: .5s;
+                @include bgimg('../img/icon_contact1.png');
+            }
         }
-        a{ width:18px; height: 18px; margin:4px 0 0 10px;
-            display: block; transition: .5s;
-            @include bgimg('../img/icon_contact1.png');
-        }
-        &:hover p{ color: $color;}
-        &:hover a{  @include bgimg('../img/icon_mail2.png') }
+
+        &:hover a p{ color: $color;}
+        &:hover > a figure{  @include bgimg('../img/icon_mail2.png') }
     }
     &.black{
         div{ opacity: .5; transition: .5s;
-            p{ color: white;}
-            a{ @include bgimg('../img/icon_contact2.png') }
+            a{
+                p{ color: white;}
+                figure{ @include bgimg('../img/icon_contact2.png') }
+            }
             &:hover{ opacity: 1;}
-            &:hover a{  @include bgimg('../img/icon_mail2.png') }
+            &:hover a figure{  @include bgimg('../img/icon_mail2.png') }
         }
     }
     

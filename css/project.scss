@@ -23,10 +23,12 @@ header{ position: fixed; z-index: 30;
 }
 .mail{ 
     div{ opacity: .5; transition: .5s;
-        p{ color: white !important;}
-        a{ background-image : url('../img/icon_contact2.png') !important; transition: .5s;}
+        a{
+            p{ color: white !important;}
+            figure{ background-image : url('../img/icon_contact2.png') !important; transition: .5s;}
+        }
         &:hover{ opacity: 1;}
-        &:hover a{ background-image : url('../img/icon_mail2.png') !important;  }
+        &:hover a figure{ background-image : url('../img/icon_mail2.png') !important;  }
     }
 }
 
