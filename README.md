@@ -19,7 +19,7 @@
 <a><img src="http://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=Webpack&logoColor=333"/></a>
 
 
-💡 Tools
+Tools
 
 
 <a><img src="http://img.shields.io/badge/-Adobe Photoshop-31A8FF?style=flat-square&logo=Adobe Photoshop&logoColor=white"/></a>
