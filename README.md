@@ -4,45 +4,58 @@
 	
   </div>
   
+<h2> Welcome to my GitHub! <br/>
+	It’s great to meet you&nbsp;&nbsp;🙏&nbsp;&nbsp;🌷
+</h2>
+<br/>
 
-<h2 align="center"> Welcome To My GitHub! 👋👋 </h2>
-
-<div align="center">
-<a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>
-<a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Kakao-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>
-<a href="https://www.instagram.com/kwons0/" target="_blank"><img src="http://img.shields.io/badge/-Kwons0-E4405F?style=flat-square&logo=Instagram&logoColor=white"/></a>
+👋&nbsp;&nbsp;Hi there! I'm front-end developer. 🛠👩🏻‍💻
+<br/><br/>
+I worked as a designer in 2020.<br/>
+I think developers who know how to design have infinite possibilities! 🔥
+<br/><br/>
+I hope you and I can be together someday.&nbsp;&nbsp;🌟✨<br/>
+Feel free to contact me! 💥
+<br/>
+<div>
+<a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>&nbsp;
+<a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Kakao-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>&nbsp;
+<a href="https://www.instagram.com/kwons0/" target="_blank"><img src="http://img.shields.io/badge/-Kwons0-E4405F?style=flat-square&logo=Instagram&logoColor=white"/></a><br/>
+<a href="https://kwons0.github.io/kwons0/"><img src="http://img.shields.io/badge/-You can see my portfolio here!-1a73e8?style=flat-square&logo=Google Chrome&logoColor=white"/></a>
 </div>
 
-&nbsp;
+<br/><br/>
 
-<p align="center">💡 Technology Stack 💡</p>
+<p>💡 Technology Stack 💡</p>
 
-<div align="center">
-<a><img src="http://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=333"/></a>
-<a><img src="http://img.shields.io/badge/-jQuery-289ff0?style=flat-square&logo=jQuery&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=React&logoColor=333"/></a>
-<br/><a><img src="http://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-JSON-f3f3f3?style=flat-square&logo=JSON&logoColor=111"/></a>
-<a><img src="http://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=Webpack&logoColor=333"/></a>
-<br/><a><img src="http://img.shields.io/badge/-Adobe Photoshop-2179bf?style=flat-square&logo=Adobe Photoshop&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-Adobe Illustrator-ff9a00?style=flat-square&logo=Adobe Illustrator&logoColor=white"/></a>
+<div>
+<a><img src="http://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=333"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-jQuery-289ff0?style=flat-square&logo=jQuery&logoColor=white"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=React&logoColor=333"/></a>&nbsp;<br/>
+<a><img src="http://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-JSON-f3f3f3?style=flat-square&logo=JSON&logoColor=111"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=Webpack&logoColor=333"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>&nbsp;<br/>
+<a><img src="http://img.shields.io/badge/-Adobe Photoshop-2179bf?style=flat-square&logo=Adobe Photoshop&logoColor=white"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-Adobe Illustrator-ff9a00?style=flat-square&logo=Adobe Illustrator&logoColor=white"/></a>&nbsp;
 <a><img src="http://img.shields.io/badge/-Adobe Premiere Pro-5959c9?style=flat-square&logo=Adobe Premiere Pro&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/></a>
+</a>
 </div>
 
-<br/><p align="center">👩🏻‍💻 Cowork tools 🧑🏻‍💻</p>
-<div align="center">
-<a><img src="http://img.shields.io/badge/-Zeplin-F4B728?style=flat-square&logo=Zerply&logoColor=111"/></a>
-<a><img src="http://img.shields.io/badge/-Google Meet-00897B?style=flat-square&logo=Google Meet&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-Zoom-2D8CFF?style=flat-square&logo=Zoom&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-Slack-4A154B?style=flat-square&logo=Slack&logoColor=white"/></a>
+<br/><p>👩🏻‍💻 Cowork tools 🧑🏻‍💻</p>
+<div>
+<a><img src="http://img.shields.io/badge/-Zeplin-F4B728?style=flat-square&logo=Zerply&logoColor=111"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-Google Meet-00897B?style=flat-square&logo=Google Meet&logoColor=white"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-Zoom-2D8CFF?style=flat-square&logo=Zoom&logoColor=white"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-Slack-4A154B?style=flat-square&logo=Slack&logoColor=white"/></a>&nbsp;
 <a><img src="http://img.shields.io/badge/-Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
 </div>
 
 <br/><br/>
-<div align=center>
+
+<div>
 	
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kwons0&layout=compact&theme=nord&bg_color=111&hide_border=true&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
 	
