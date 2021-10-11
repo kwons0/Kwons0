@@ -5,9 +5,9 @@
   </div>
 <h2> Welcome To My GitHub! 👋👋 </h2>
 
-<a align=center href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>
-<a align=center href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Kakao_open_chat-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>
-<a align=center href="https://www.instagram.com/kwons0/" target="_blank"><img src="http://img.shields.io/badge/-Kwons0-E4405F?style=flat-square&logo=Instagram&logoColor=white"/></a>
+<a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>
+<a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Kakao_open_chat-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>
+<a href="https://www.instagram.com/kwons0/" target="_blank"><img src="http://img.shields.io/badge/-Kwons0-E4405F?style=flat-square&logo=Instagram&logoColor=white"/></a>
 
 
 
