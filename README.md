@@ -23,7 +23,7 @@
 <a><img src="http://img.shields.io/badge/-Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/></a>
 
 
-<!-- <a><img src="http://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a>
+<a><img src="http://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-PHP-777BB4?style=flat-square&logo=PHP&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/></a>
 
@@ -31,7 +31,7 @@
 <a><img src="http://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Angular-DD0031?style=flat-square&logo=Angular&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></a> -->
+<a><img src="http://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></a>
 
 
 
