@@ -4,7 +4,7 @@
 	
   </div> -->
   
-<div align=center>
+<div align="center">
 	<h2> Welcome To My GitHub! 👋👋 </h2>
 
 	<a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>
