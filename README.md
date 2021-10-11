@@ -1,8 +1,8 @@
-<!--   <div align=end> -->
+  <div align=end>
 	
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkwons0&count_bg=%23A2A2A2&title_bg=%23333333&icon=github.svg&icon_color=%23DFDFDF&title=hits&edge_flat=true)](https://github.com/kwons0)
 	
-<!--   </div> -->
+  </div>
 <h2> Welcome to my GitHub! <br/>
 	It’s great to meet you&nbsp;&nbsp;🙏&nbsp;&nbsp;🌷
 </h2>
