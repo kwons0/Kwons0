@@ -4,10 +4,10 @@
 	
   </div> -->
 <h2> Welcome To My GitHub! 👋👋 </h2>
-
+<br><br>
 💡 Skills
-HTML5, CSS3, javaScript, jQuery, Sass, React, JSON, Webpack
-<a><img src="http://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
+<br>
+<a><img src="http://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>&nbsp;&nbsp;
 <a><img src="http://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=333"/></a>
 <a><img src="http://img.shields.io/badge/-jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=white"/></a>
