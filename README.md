@@ -55,11 +55,11 @@ Feel free to contact me! 💥
 
 <br/><br/>
 
-<div>
+<!-- <div>
 	
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kwons0&layout=compact&theme=nord&bg_color=393939&hide_border=true&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
 	
-</div>
+</div> -->
   
 
 
