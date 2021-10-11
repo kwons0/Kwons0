@@ -6,6 +6,7 @@
 <h2> Welcome To My GitHub! 👋👋 </h2>
 💡 Skills
 
+
 <a><img src="http://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=333"/></a>
@@ -15,13 +16,16 @@
 <a><img src="http://img.shields.io/badge/-JSON-f3f3f3?style=flat-square&logo=JSON&logoColor=111"/></a>
 <a><img src="http://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=Webpack&logoColor=333"/></a>
 
+
 💡 Tools
+
+
 <a><img src="http://img.shields.io/badge/-Adobe Photoshop-31A8FF?style=flat-square&logo=Adobe Photoshop&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Adobe Illustrator-FF9A00?style=flat-square&logo=Adobe Illustrator&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Adobe Premiere Pro-9999FF?style=flat-square&logo=Adobe Premiere Pro&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/></a>
 
-<a><img src="http://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a>
+<!-- <a><img src="http://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-PHP-777BB4?style=flat-square&logo=PHP&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/></a>
 
@@ -29,7 +33,7 @@
 <a><img src="http://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Angular-DD0031?style=flat-square&logo=Angular&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></a>
+<a><img src="http://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></a> -->
 
 
 
