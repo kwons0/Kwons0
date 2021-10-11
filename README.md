@@ -35,7 +35,7 @@ Feel free to contact me! 💥
 <a><img src="http://img.shields.io/badge/-jQuery-289ff0?style=flat-square&logo=jQuery&logoColor=white"/></a>&nbsp;
 <a><img src="http://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=React&logoColor=333"/></a>&nbsp;<br/>
 <a><img src="http://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/></a>&nbsp;
-<a><img src="http://img.shields.io/badge/-JSON-f3f3f3?style=flat-square&logo=JSON&logoColor=111"/></a>&nbsp;
+<a><img src="http://img.shields.io/badge/-JSON-494949?style=flat-square&logo=JSON&logoColor=white"/></a>&nbsp;
 <a><img src="http://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=Webpack&logoColor=333"/></a>&nbsp;
 <a><img src="http://img.shields.io/badge/-Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>&nbsp;<br/>
 <a><img src="http://img.shields.io/badge/-Adobe Photoshop-2179bf?style=flat-square&logo=Adobe Photoshop&logoColor=white"/></a>&nbsp;
@@ -57,7 +57,7 @@ Feel free to contact me! 💥
 
 <div>
 	
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kwons0&layout=compact&theme=nord&bg_color=111&hide_border=true&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kwons0&layout=compact&theme=nord&bg_color=393939&hide_border=true&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
 	
 </div>
   
