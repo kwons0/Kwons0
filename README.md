@@ -5,6 +5,12 @@
   </div> -->
 <h2> Welcome To My GitHub! 👋👋 </h2>
 
+<a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>
+<a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>
+<a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-KakaoTalk-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>
+
+
+
 💡 Skills
 
 
