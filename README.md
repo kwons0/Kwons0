@@ -58,7 +58,7 @@ I look forward to hearing from you! 💥
 
 <div>
 	
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kwons0&layout=compact&theme=nord&bg_color=393939&hide_border=true&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kwons0&layout=compact&theme=nord&bg_color=f5f5f5&hide_title=true&text_color=111111&hide_border=true&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
 	
 </div>
   
