@@ -11,7 +11,7 @@
 
 👋&nbsp;&nbsp;Hi there! I'm front-end developer. 🛠👩🏻‍💻
 <br/><br/>
-I worked as a designer in 2019~2020.<br/>
+I worked as a designer in 2019~2021.<br/>
 I think developers who know how to design have infinite possibilities! 🔥
 <br/><br/>
 I hope you and I can be together someday.&nbsp;&nbsp;🌟✨<br/>
