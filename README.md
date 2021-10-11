@@ -8,13 +8,15 @@
 </h2>
 <br/>
 
-👋&nbsp;&nbsp;Hi there! I'm front-end developer. 🛠👩🏻‍💻
+👋&nbsp;&nbsp;Hi there How is it going?<br/>
+I'm front-end developer. 🛠👩🏻‍💻
 <br/><br/>
-I worked as a designer in 2019~2021.<br/>
-I think developers who know how to design have infinite possibilities! 🔥
+I've worked as a designer from 2019 to 2021.<br/>
+I think that the developers who knows how to design have an infinite possibilities! 🔥🎨
 <br/><br/>
-I hope you and I can be together someday.&nbsp;&nbsp;🌟✨<br/>
-Feel free to contact me! 💥
+I hope you and I can be working together someday.&nbsp;&nbsp;🌎🌍🌏👥<br/>
+Feel free to contact me if you're interested in working with me!<br/>
+I look forward to hearing from you! 💥
 <br/>
 <div>
 <a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>&nbsp;
