@@ -15,24 +15,24 @@
 
 &nbsp;
 
-<p align="center">💡 Front-end Stack 💡</p>
+<p align="center">💡 Technology Stack 💡</p>
 
 <div align="center">
 <a><img src="http://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=333"/></a>
 <a><img src="http://img.shields.io/badge/-jQuery-289ff0?style=flat-square&logo=jQuery&logoColor=white"/></a>
-<a><img src="http://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/></a>
-<br><a><img src="http://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=React&logoColor=333"/></a>
+<a><img src="http://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=React&logoColor=333"/></a>
+<br/><a><img src="http://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-JSON-f3f3f3?style=flat-square&logo=JSON&logoColor=111"/></a>
 <a><img src="http://img.shields.io/badge/-Webpack-8DD6F9?style=flat-square&logo=Webpack&logoColor=333"/></a>
-<br><a><img src="http://img.shields.io/badge/-Adobe Photoshop-2179bf?style=flat-square&logo=Adobe Photoshop&logoColor=white"/></a>
+<br/><a><img src="http://img.shields.io/badge/-Adobe Photoshop-2179bf?style=flat-square&logo=Adobe Photoshop&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Adobe Illustrator-ff9a00?style=flat-square&logo=Adobe Illustrator&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Adobe Premiere Pro-5959c9?style=flat-square&logo=Adobe Premiere Pro&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/></a>
 </div>
 
-<br><p align="center">👩‍💻 Cowork tools 🧑‍💻</p>
+<br/><p align="center">👩🏻‍💻 Cowork tools 🧑🏻‍💻</p>
 <div align="center">
 <a><img src="http://img.shields.io/badge/-Zeplin-F4B728?style=flat-square&logo=Zerply&logoColor=111"/></a>
 <a><img src="http://img.shields.io/badge/-Google Meet-00897B?style=flat-square&logo=Google Meet&logoColor=white"/></a>
@@ -40,6 +40,15 @@
 <a><img src="http://img.shields.io/badge/-Slack-4A154B?style=flat-square&logo=Slack&logoColor=white"/></a>
 <a><img src="http://img.shields.io/badge/-Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
 </div>
+
+<br/><br/>
+<div align=center>
+	
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kwons0&layout=compact&theme=nord&bg_color=111&hide_border=true&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
+	
+</div>
+  
+
 
 
 
