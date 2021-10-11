@@ -44,7 +44,7 @@ Feel free to contact me! 💥
 </a>
 </div>
 
-<br/><p>👩🏻‍💻 Cowork tools 🧑🏻‍💻</p>
+<!-- <br/><p>👩🏻‍💻 Cowork tools 🧑🏻‍💻</p>
 <div>
 <a><img src="http://img.shields.io/badge/-Zeplin-F4B728?style=flat-square&logo=Zerply&logoColor=111"/></a>&nbsp;
 <a><img src="http://img.shields.io/badge/-Google Meet-00897B?style=flat-square&logo=Google Meet&logoColor=white"/></a>&nbsp;
@@ -53,7 +53,7 @@ Feel free to contact me! 💥
 <a><img src="http://img.shields.io/badge/-Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
 </div>
 
-<br/><br/>
+<br/><br/> -->
 
 <!-- <div>
 	
