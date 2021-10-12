@@ -14,7 +14,7 @@ I'm front-end developer. 🛠👩🏻‍💻
 I've worked as a designer from 2019 to 2021.<br/>
 I think that the developers who knows how to design have an infinite possibilities! 🔥🎨
 <br/><br/>
-I’d love to work with your company oneday.&nbsp;&nbsp;🌎 🌍 🌏 👥<br/>
+I’d love to work with your company oneday.&nbsp;&nbsp;👥 🌎 🌍 🌏<br/>
 Feel free to contact me if you're interested in working with me!<br/>
 I look forward to hearing from you! 💥
 <br/>
