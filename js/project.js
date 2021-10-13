@@ -30,3 +30,25 @@ $('.con').on({
         $(this).children().find('small').eq(1).css({ 'transform' : 'translateY(0)'})
     }
 })
+
+let timer;
+
+$(document).scroll(function() {
+
+    var innerHeight = $(window).innerHeight(),
+        scrollTop = $(window).scrollTop();
+
+    // next 푸터 타임바
+    clearTimeout(timer);
+
+    if( scrollTop + innerHeight < ($('footer').offset().top + 150) ){
+        $('.timebar span').removeClass('active');
+        $('.timebar span').css({ 'transition' : '0s'})
+    }else{
+        $('.timebar span').addClass('active')
+        $('.timebar span').css({ 'transition' : '8s'})
+        timer = setTimeout(function(){
+            location.href = '../contact.html'
+        },8000);
+    }
+});

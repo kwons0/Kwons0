@@ -1,22 +1,38 @@
-let delta, num = 0, move;
+let delta, num = 0, move, timer;
 
 $(window).on('mousewheel DOMMouseScroll',function(e){
     delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -40;
     clearTimeout(move);
     move = setTimeout(function(){
-        if(delta < 0){
-            if(num < 2) num++; //down
-        }else{
-            if(num > 0) num--;   //up
-        }
-        ani();
-        if(num > 0){
-            $('body').css({ 'background-color' : '#111111'})
-            $('.burger, .logo, .mail').addClass('black')
-        }else{
-            $('body').css({ 'background-color' : 'transparent'})
-            $('.burger, .logo, .mail').removeClass('black')
-        }
+      if(delta < 0){
+          if(num < 2) num++; //down
+      }else{
+          if(num > 0) num--;   //up
+      }
+      ani();
+
+      if(num > 0){
+          $('body').css({ 'background-color' : '#111111'})
+          $('.burger, .logo, .mail').addClass('black')
+      }else{
+          $('body').css({ 'background-color' : 'transparent'})
+          $('.burger, .logo, .mail').removeClass('black')
+      }
+
+      
+      clearTimeout(timer);
+
+      if( num !== 2 ){
+          $('.timebar span').removeClass('active');
+          $('.timebar span').css({ 'transition' : '0s','transition-delay' : '.5s'})
+      }else{
+          $('.timebar span').addClass('active')
+          $('.timebar span').css({ 'transition' : '8s','transition-delay' : '0s'})
+          timer = setTimeout(function(){
+              location.href = '../about.html'
+          },8000);
+      }
+        
     },100);
 });
 

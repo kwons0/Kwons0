@@ -56,6 +56,11 @@ video {
   height: 100vh;
   position: relative;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
 
 .start p {
@@ -410,7 +415,7 @@ header .h .menu > div span {
   -webkit-transition: .5s;
   transition: .5s;
   overflow: hidden;
-  width: 40%;
+  width: 50%;
   height: 110px;
   display: block;
   margin: 25px 0;
@@ -646,6 +651,16 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+}
+
+::-moz-selection {
+  background: #1a73e8;
+  color: white;
+}
+
+::selection {
+  background: #1a73e8;
+  color: white;
 }
 
 @-webkit-keyframes opaci {
@@ -1203,24 +1218,22 @@ footer a article h2 {
   padding-bottom: 20px;
 }
 
-footer a article div {
-  width: 400px;
-  height: 2px;
-  position: relative;
-}
-
-footer a article div span {
-  display: block;
+footer a article .timebar {
   width: 100%;
-  height: 100%;
+  min-width: 300px;
+  height: 2px;
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-footer a article div span:nth-of-type(2) {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100px;
+footer a article .timebar span {
+  display: block;
+  width: 0%;
+  height: 100%;
   background-color: white;
+}
+
+footer a article .timebar span.active {
+  width: 100%;
 }
 /*# sourceMappingURL=star.css.map */

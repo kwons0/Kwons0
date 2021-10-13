@@ -1,3 +1,10 @@
+let timer;
+
+$(document).ready(function() {
+    $('.start').css({ 'opacity':'1', 'transform' : 'translateY(0px)'})
+});
+
+
 $(document).scroll(function() {
 
     var innerHeight = $(window).innerHeight(),
@@ -24,6 +31,21 @@ $(document).scroll(function() {
         $('.start p').addClass('active');
     }else{
         $('.start p').removeClass('active');
+    }
+
+    
+    // next 푸터 타임바
+    clearTimeout(timer);
+
+    if( scrollTop + innerHeight < ($('footer').offset().top + ($('footer').height()/3)) ){
+        $('.timebar span').removeClass('active');
+        $('.timebar span').css({ 'transition' : '0s'})
+    }else{
+        $('.timebar span').addClass('active')
+        $('.timebar span').css({ 'transition' : '8s'})
+        timer = setTimeout(function(){
+            location.href = '../contact.html'
+        },8000);
     }
 
 });

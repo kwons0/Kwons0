@@ -56,6 +56,11 @@ video {
   height: 100vh;
   position: relative;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
 
 .start p {
@@ -410,7 +415,7 @@ header .h .menu > div span {
   -webkit-transition: .5s;
   transition: .5s;
   overflow: hidden;
-  width: 40%;
+  width: 50%;
   height: 110px;
   display: block;
   margin: 25px 0;
@@ -646,6 +651,16 @@ header .h .menu ul li:nth-of-type(2) a:nth-of-type(4):hover {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+}
+
+::-moz-selection {
+  background: #1a73e8;
+  color: white;
+}
+
+::selection {
+  background: #1a73e8;
+  color: white;
 }
 
 @-webkit-keyframes opaci {

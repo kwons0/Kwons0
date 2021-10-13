@@ -1,7 +1,34 @@
 const sense = document.querySelector('.hello > div'),
+    senseTyping = document.querySelector('.hello > div b:nth-of-type(1)'),
     fire = document.querySelectorAll('.face > p'),
     faceImg = document.querySelector('.face > figure');
+let delta, num = 0, move, timer;
 
+
+
+
+// ~ typing animation
+let typingIdx=0,
+    typingTxt =  senseTyping.innerText;
+    splitTxt = typingTxt.split("");
+
+// let tyInt = setInterval(typing,200)
+
+setInterval(typing,200);
+
+function typing(){ 
+    if(typingIdx<splitTxt.length){
+        $(".typing").append(splitTxt[typingIdx]);
+        typingIdx++; 
+    }else{ 
+        clearInterval(); 
+    } 
+} 
+
+
+
+
+// 얼굴 바꾸기
 $(document).scroll(function() {
     if( $(window).scrollTop() >= ($('.hello figure').offset().top)/2 ){
         $(fire).addClass('active');
@@ -14,8 +41,7 @@ $(document).scroll(function() {
 
 
 
-let delta, num = 0, move;
-
+// 스크롤 
 $(window).on('mousewheel DOMMouseScroll',function(e){
     delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -40;
     clearTimeout(move);
@@ -25,12 +51,33 @@ $(window).on('mousewheel DOMMouseScroll',function(e){
         }else{
             if(num > 0) num--;   //up
         }
-        ani();
+        $('html,body').animate({ 
+            scrollTop : $(window).height() * num 
+        });
+        if( num == 1){
+            setTimeout( ()=>{
+                $('.hello figure p').addClass('active');
+                $('.hello h2').addClass('active');
+            },500)
+        }else{
+            $('.hello figure p').removeClass('active');
+            $('.hello h2').removeClass('active');
+        }
     },100);
-});
 
-function ani(){
-    $('html,body').animate({ 
-        scrollTop : $(window).height() * num 
-    });
-};
+    //푸터 타임바
+    clearTimeout(timer);
+
+    if( num !== 2 ){
+        $('.timebar span').removeClass('active');
+        $('.timebar span').css({ 'transition' : '0s', 'transition-delay' : '.5s'})
+    }else{
+        $('.timebar span').addClass('active')
+        $('.timebar span').css({ 'transition' : '8s', 'transition-delay' : '0s'})
+        timer = setTimeout(function(){
+            location.href = '../project.html'
+        },8000);
+    }
+
+
+});

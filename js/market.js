@@ -1,3 +1,9 @@
+let timer ;
+
+$(document).ready(function() {
+    $('.start').css({ 'opacity':'1', 'transform' : 'translateY(0px)'})
+});
+
 $(document).scroll(function() {
 
     var innerHeight = $(window).innerHeight(),
@@ -15,8 +21,13 @@ $(document).scroll(function() {
 
             $(contitP).eq(i).css({'opacity':'1'});
             $(contitP).eq(i).css({ 'transform' : 'translateY(0)'})
+
+            if( i == contit.length - 1 ){
+                $('.mark p').css({'opacity':'1', 'transform' : 'translateY(0)'});
+            }
         }
     }
+    
 
     // 메인 이미지 width 조정
     if( ( innerHeight - scrollTop ) <  ($('.detail').offset().top -30) ){
@@ -77,5 +88,20 @@ $(document).scroll(function() {
     
     var scale = (100 * (calc/8 + 1) );
     $('footer a').css({'background-size': scale + '%'});
+
+
+    // next 푸터 타임바
+    clearTimeout(timer);
+
+    if( scrollTop + innerHeight < ($('footer').offset().top + ($('footer').height()/3)) ){
+        $('.timebar span').removeClass('active');
+        $('.timebar span').css({ 'transition' : '0s'})
+    }else{
+        $('.timebar span').addClass('active')
+        $('.timebar span').css({ 'transition' : '8s'})
+        timer = setTimeout(function(){
+            location.href = '../star.html'
+        },8000);
+    }
 
 });

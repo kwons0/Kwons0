@@ -1,3 +1,11 @@
+let timer;
+
+$(document).ready(function() {
+ $('.start').css({ 'opacity':'1', 'transform' : 'translateY(0px)'})
+});
+
+
+
 // 스크롤이벤트
 $(document).scroll(function() {
 
@@ -64,5 +72,20 @@ $(document).scroll(function() {
 
     var scale = (100 * (calc/8 + 1) );
     $('footer a').css({'background-size': scale + '%'});
+
+
+    // next 푸터 타임바
+    clearTimeout(timer);
+
+    if( scrollTop + innerHeight < ($('footer').offset().top + ($('footer').height()/3)) ){
+        $('.timebar span').removeClass('active');
+        $('.timebar span').css({ 'transition' : '0s'})
+    }else{
+        $('.timebar span').addClass('active')
+        $('.timebar span').css({ 'transition' : '8s'})
+        timer = setTimeout(function(){
+            location.href = '../pizza.html'
+        },8000);
+    }
 
 });
