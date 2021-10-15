@@ -1971,6 +1971,7 @@ footer a article .timebar span.active {
   .row3 .contit p b {
     font-size: 10px;
     font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   }
   .row3 .improv {
     width: 100%;

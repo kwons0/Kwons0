@@ -1712,6 +1712,9 @@ footer a article .timebar span.active {
   .row2 .line3 .contit p {
     padding-top: 10px;
   }
+  .row3 {
+    background-attachment: scroll;
+  }
   .row3 .contit {
     width: 70%;
   }

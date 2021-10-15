@@ -471,7 +471,9 @@ footer{
             }
         }
     }
-    .row4{ width: 100%; height: 50vh; }
+    .row4{ width: 100%; height: 50vh; 
+        background-attachment: scroll;
+    }
     .row5{
         padding-top: 40px;
         > div{ width: 100%; img{width: 100%;}}

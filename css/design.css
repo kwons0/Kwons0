@@ -1635,6 +1635,9 @@ footer > a article h2 {
   .line1 {
     padding-bottom: 60px;
   }
+  .line1 > p {
+    background-attachment: scroll;
+  }
   .line1 div {
     width: 100%;
     padding-top: 30px;

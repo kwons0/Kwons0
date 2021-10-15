@@ -328,7 +328,9 @@ footer{
             h2{@include font(15px, 600); }
             p{ @include font(10px, 300);
                 padding-top: 10px;
-                b{ @include font(10px, 300); }
+                b{ @include font(10px, 300); 
+                    border-bottom: 1px solid rgba(white, 0.7);
+                }
             } 
         }
         .improv{
