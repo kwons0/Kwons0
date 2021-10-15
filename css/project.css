@@ -1451,11 +1451,11 @@ footer > a article h2 {
     bottom: 20%;
   }
   .list .con article h2 {
-    font-size: 35px;
+    font-size: 37px;
     font-weight: 400;
   }
   .list .con article p {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 400;
   }
   .list .con article span {
@@ -1575,14 +1575,15 @@ footer > a article h2 {
     position: absolute;
     left: 50%;
     top: 50%;
+    bottom: auto;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
   .list .con article h2 {
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 400;
     opacity: 1;
-    white-space: inherit;
+    white-space: nowrap;
     margin-bottom: 5px;
   }
   .list .con article p {
@@ -1612,7 +1613,7 @@ footer > a article h2 {
     top: 65%;
   }
   .list1 .con1.active article h2 {
-    font-size: 20px !important;
+    font-size: 25px !important;
   }
   .list1 div {
     width: 100%;
