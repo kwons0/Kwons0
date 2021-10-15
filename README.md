@@ -11,7 +11,7 @@
 👋&nbsp;&nbsp;Hi there How is it going?<br/>
 I'm front-end developer. 🛠👩🏻‍💻
 <br/><br/>
-I've worked as a designer from 2019 to 2021.<br/>
+I've worked as a web designer from 2019 to 2021.<br/>
 I think that the developers who knows how to design have an infinite possibilities! 🔥🎨
 <br/><br/>
 I’d love to work with your company oneday.&nbsp;&nbsp;👥 🌎 🌍 🌏<br/>
