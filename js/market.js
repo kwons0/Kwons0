@@ -1,8 +1,10 @@
 let timer ;
+const mql = window.matchMedia("screen and (max-width: 1024px)");
 
 $(document).ready(function() {
     $('.start').css({ 'opacity':'1', 'transform' : 'translateY(0px)'})
 });
+
 
 $(document).scroll(function() {
 
@@ -53,9 +55,14 @@ $(document).scroll(function() {
         deHeight1 = main1.offset().top,
         deWidth1 = main1.width(),
         device1Y = ((innerHeight + scrollTop - deHeight1) / deWidth1) ;
-    if( (innerHeight + scrollTop ) >= main1.offset().top  ){
+    if( !mql.matches && (innerHeight + scrollTop ) >= main1.offset().top  ){
         main1.css({ 'transform' : 'translateY( -' + device1Y * 40 +'px)'})
         main2.css({ 'transform' : 'translateY( -' + device1Y * 70 +'px)'})
+    };
+
+    if( mql.matches && (innerHeight + scrollTop ) >= main1.offset().top  ){
+        main1.css({ 'transform' : 'translateY( -' + device1Y * 20 +'px)'})
+        main2.css({ 'transform' : 'translateY( -' + device1Y * 40 +'px)'})
     };
 
     // 배경색
@@ -74,9 +81,14 @@ $(document).scroll(function() {
         newsWidth = newsCon.width(),
         calc = ((innerHeight + scrollTop - height) / newsWidth) *200 ;
 
-    if( ((innerHeight) + scrollTop ) >= newsCon.offset().top  ){
+    if( !mql.matches && ((innerHeight) + scrollTop ) >= newsCon.offset().top  ){
         newsCon.css({ 'transform' : 'translateX(-' + calc *5 +'px)'})
         $('.line5 div span:nth-of-type(2)').css({ 'width': 'calc(10% + ' + calc*2 + 'px)' });
+    };
+
+    if( mql.matches && ((innerHeight) + scrollTop ) >= newsCon.offset().top  ){
+        newsCon.css({ 'transform' : 'translateX(-' + calc/2 +'px)'})
+        $('.line5 div span:nth-of-type(2)').css({ 'width': 'calc(10% + ' + calc/5 + '%)' });
     };
 
     // footer 배경 opacity, scale
@@ -92,7 +104,7 @@ $(document).scroll(function() {
 
     // next 푸터 타임바
     clearTimeout(timer);
-
+    if( mql.matches) return;
     if( scrollTop + innerHeight < ($('footer').offset().top + ($('footer').height()/3)) ){
         $('.timebar span').removeClass('active');
         $('.timebar span').css({ 'transition' : '0s'})

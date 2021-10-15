@@ -19,6 +19,7 @@
     .line1{ //라우터돔
         @include flex();
         > div{  width: 65%; }
+        .contit p{ padding-top: 20px;}
     }
     .line2{ //제이슨
         padding-top: 100px;
@@ -28,6 +29,7 @@
             @include bgimg('../img/pixar_img1.jpg');
             background-attachment:fixed;
         }
+        .contit p{ padding-top: 20px;}
     }
 }
 
@@ -62,20 +64,15 @@
                 width: 100%; padding-top: 40px;
                 h2{ padding-bottom: 5px;
                     border-bottom: 2px solid white; 
+                    white-space: nowrap;
                 }
                 p{ width: 60%}
             }
         }
-        > article{ //서치
-            @include flex(flex-start,space-between); @include conWid(30px);
-            h2{ padding-bottom: 5px;
-                border-bottom: 2px solid white;
-            }
-            p{ width: 60%; @include font(15px, 300);}
-        }
         .line4{ // 티저영상
             @include flex(); @include conWid();
             > div{ width: 65%;}
+            .contit p{ padding-top: 20px;}
         }
         .line5{ //서치
             @include conWid();
@@ -84,7 +81,7 @@
                 @include flex( flex-start, space-between); 
                 width: 100%; padding-top: 40px;
                 h2{ padding-bottom: 5px;
-                    border-bottom: 2px solid white; 
+                    border-bottom: 2px solid white; white-space: nowrap;
                 }
                 p{ width: 60%}
             }
@@ -100,6 +97,7 @@
             .contit{
                 padding: 80px 0;
                 position: sticky; left: 65%; top: 150px;
+                p{ padding-top: 20px;}
             }
         }
     }
@@ -130,7 +128,9 @@
     .line8{
         padding: 130px 0;  @include flex();
         video{ width: 60%; }
-        .contit{ width: 25%; margin: 0 10% 0 5%}
+        .contit{ width: 25%; margin: 0 10% 0 5%;
+            p{ padding-top: 20px;}
+        }
     }
 }
 footer{
@@ -141,7 +141,263 @@ footer{
 
 
 
+@media(max-width: $pc){
+    .start figcaption{ font-size: 60px;}
+    .detail{ width: 80%;}
+    .row1{ width: 80%;}
+    .row2 .insertBg{
+        .line3-1{ // improvement 캐릭터
+            width: 80%;
+            .contit h2{
+                white-space: pre-line;
+                border-bottom: none;
+                line-height: 1.5;
+            }
+        }
+        .line4{ // 티저영상
+            width: 80%;
+        }
+        .line5{ //서치
+            width: 80%;
+            .contit h2{
+                white-space: pre-line;
+                border-bottom: none;
+                line-height: 1.5;
+            }
+        }
+        .line6{ //단편 팝업
+            width: 80%
+        }
+    }
+    .row3 .line7 .contit{
+        width: 80%;
+    }
+}
 
-@media(max-width: 1280px){
 
+@media(max-width: $tab){
+    .start {
+        width: 100%; height: 70vh;
+        p{ width: 80%; height: 65vh; padding-top: 10vh; }
+        figcaption{
+            @include font(50px, 400);
+            -webkit-text-stroke: 1.5px white;
+        }
+    }
+    .detail{ margin-bottom: 10vh;  display: block;
+        .left{  width: 100%;
+            h2{ @include font(35px, 500);}
+            ul{ width: 100%; @include flex( flex-start, flex-start); }
+        }
+        .right{ white-space: inherit; height: auto;
+            width: 100%; margin-top: 3vh;
+            div:nth-of-type(2){ @include flex( center, space-between); margin-top: 3vh;
+                a{ width: 45%; margin-right: 0; }
+            }
+        }
+    }
+    .row1{
+        .line2{ //제이슨
+            padding-top: 80px;
+            div:nth-of-type(1){  height: 300px;
+            }
+        }
+    }
+    .row2{
+        .line3{ width: 100%; margin-top: 80px;}
+        .insertBg{
+            .line4{ padding-top: 80px; }
+            .line5{ padding-top: 80px; }
+            .line6{ padding: 80px 0; }
+        }
+    }
+    .row3{
+        .line7{ padding-top: 80px; 
+            .contit{ width: 90%;}
+        }
+        .line8{ padding: 80px 0; }
+    }
+    footer{
+        width: 100%; height: 250px;
+        a article{
+            small{ @include font(18px, 300); }
+            h2{ @include font(40px, 400);
+                padding-bottom: 20px;
+            }
+            .timebar{ display: none; }
+        }
+    }
+}
+@media (max-width:800px) {
+    .row1{
+        .line1{ //라우터돔
+            @include flex(); flex-direction: column;
+            > div{  width: 100%; order: 1; }
+            .contit{ order: 2; width: 100%; 
+                h2{ white-space: nowrap; }
+            }
+        }
+        .line2{ //제이슨
+            padding-top: 60px;
+            @include flex(); flex-direction: column;
+            div:nth-of-type(1){ order: 1; width: 100%; }
+            .contit{ order: 2; width: 100%; 
+                h2{ white-space: nowrap;}
+            }
+        }
+    }
+}
+
+@media(max-width: $mobile){
+    .start {
+        width: 100%; height: 70vh;
+        p{ width: 80%; height: 65vh; padding-top: 10vh; }
+        figcaption{
+            @include font(30px, 400);
+            transform: translate(-50%,-20%);
+            -webkit-text-stroke: 1px white;
+        }
+    }
+    .detail{ margin-bottom: 10vh;  display: block;
+        .left{  width: 100%;
+            h2{ @include font(20px, 500);}
+            small{ @include font(15px, 400);  margin-left: 10px; }
+            ul{ 
+                li{ @include font(11px, 300); }
+                li:nth-of-type(1){ padding-right: 20px; }
+                li:nth-of-type(2){
+                    b{ @include font(11px, 300);}
+                }
+            }
+        }
+        .right{
+            div:nth-of-type(1){  @include font(11px, 300); 
+                b{ @include font(11px, 300);}
+            }
+            div:nth-of-type(2){ @include flex( center, space-between); margin-top: 3vh;
+                a{ padding: 5px 0; width: 47%;
+                    @include font(10px, 300);
+                }
+            }
+        }
+    }
+    .contit{
+        h2{@include font(15px, 600); }
+        p{ @include font(10px, 300);
+            b{ @include font(10px, 300); }
+        } 
+    }
+    .row1{
+        .line1{ //라우터돔
+            .contit{ order: 2; width: 100%;  padding-top: 20px;
+                h2{ white-space: pre-line; }
+                p{ padding-top: 10px;}
+            }
+        }
+        .line2{ //제이슨
+            padding-top: 60px;
+            div:nth-of-type(1){ height: 200px; }
+            .contit{ padding-top: 20px;
+                h2{ white-space: nowrap;}
+                p{ padding-top: 10px;}
+            }
+        }
+    }
+    .row2{
+        .line3{ width: 100%; margin-top: 60px;}
+        .insertBg{
+            .line3-1{ // improvement 캐릭터
+                figure{
+                    display: block;
+                    p{ width: 100%; padding-top: 10px;
+                        &:nth-of-type(1){ padding-top: 20px;}
+                        img{ width: 100%;}
+                    }
+                }
+                .contit{ 
+                    display: block;
+                    width: 100%; padding-top: 20px;
+                    h2{ 
+                        white-space: nowrap;
+                        border-bottom: none;
+                        line-height: 1.5;
+                        padding-bottom: 0;
+                    }
+                    p{ @include font(10px, 300); width: 100%;
+                        padding-top: 10px;
+                        b{ @include font(10px, 300); }
+                    } 
+                }
+            }
+            .line4{ padding-top: 60px; 
+                flex-direction: column;
+                > div{ order: 1; width: 100%;}
+                .contit{
+                    order: 2; width: 100%;
+                    padding-top: 20px;
+                    h2{@include font(15px, 600); }
+                    p{ @include font(10px, 300);
+                        padding-top: 10px;
+                        b{ @include font(10px, 300); }
+                    }
+                }
+            }
+            .line5{ padding-top: 60px;
+                .contit{
+                    width: 100%; display: block;
+                    padding-top: 20px;
+                    h2{@include font(15px, 600); white-space: initial; padding-bottom: 0 }
+                    p{ @include font(10px, 300); width: 100%;
+                        padding-top: 10px;
+                        b{ @include font(10px, 300); }
+                    }
+                }
+            }
+            .line6{ padding: 60px 0;
+                flex-direction: column;
+                > div{ width: 100%;}
+                .contit{
+                    width: 100%; display: block;
+                    padding: 20px 0;
+                    h2{@include font(15px, 600); white-space: initial;padding-bottom: 0 }
+                    p{ @include font(10px, 300); width: 100%; padding-top: 10px;
+                        b{ @include font(10px, 300); }
+                    }
+                }
+            }
+        }
+    }
+    .row3{
+        .line7{ padding-top: 60px; 
+            .contit{ 
+                width: 80%; display: block;
+                padding-top: 30px;
+                h2{@include font(15px, 600); white-space: initial; }
+                p{ @include font(10px, 300); width: 100%;
+                    padding-top: 10px;
+                    b{ @include font(10px, 300); }
+                }
+            }
+        }
+        .line8{ padding: 60px 0; display: block;
+            video{ width: 90%;}
+            .contit{ 
+                width: 80%; margin: 0 auto; display: block;
+                padding: 20px 0;
+                h2{@include font(15px, 600); white-space: initial; }
+                p{ @include font(10px, 300); width: 100%;
+                    padding-top: 10px;
+                    b{ @include font(10px, 300); }
+                }
+            }
+        }
+    }
+    footer{ height: 150px;
+        a article{
+            small{ @include font(10px, 300); }
+            h2{ @include font(30px, 400);
+                padding-bottom: 0;
+            }
+        }
+    }
 }

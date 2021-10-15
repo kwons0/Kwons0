@@ -78,7 +78,6 @@ body{ overflow: hidden; transition: background-color 500ms linear; }
     
 }
 .submit{
-    // background-color: #f1f1f1;
     width: 100%; height: 100vh;
     
     div{
@@ -108,52 +107,50 @@ body{ overflow: hidden; transition: background-color 500ms linear; }
                 }
             }
         }
-        form{
-            width: 50%; padding-bottom: 50px; 
-            position: relative;
-            ul{
-                li{ margin: 10px 0;
-                    input{
-                        width: 100%; border: none;
-                        border-bottom: 2px solid rgb(49, 49, 49);
-                        background: none; color: white;
-                        @include font( 16px, 300);
-                        padding: 15px 20px;
-                        // &:nth-of-type(2n){ margin-left: 20px;}
-                        &::placeholder{ color: #aaa; @include font( 16px, 300)}
-                        &:focus{
-                            outline: none;
-                            border-bottom: 2px solid $color;
-                        }
-                    }
-                    textarea{ 
-                        width: 100%; height: 180px; background: none;
-                        resize: none; padding: 20px; margin: 20px 0 10px 0;
-                        color: white; @include font( 16px, 300);
-                        border: 2px solid rgb(49, 49, 49);
-                        @include font( 16px, 400);
-                        &::placeholder{ color: #aaa; @include font( 16px, 300)}
-                        &:focus{
-                            outline: none;
-                            border: 2px solid $color;
-                        }
-                    }
-                    button{ 
-                        background-color: $color;
-                        width: 100%; border: none;
-                        @include font(15px,500);
-                        @extend %fontTi; color: white;
-                        padding: 10px 0; transition: .5s;
-                        &:hover{ background-color: #0a57bb;}
+    }
+    form{
+        width: 50%; padding-bottom: 50px; 
+        position: relative;
+        ul{
+            li{ margin: 10px 0;
+                input{
+                    width: 100%; border: none;
+                    border-bottom: 2px solid rgb(49, 49, 49);
+                    background: none; color: white;
+                    @include font( 16px, 300);
+                    padding: 15px 20px;
+                    // &:nth-of-type(2n){ margin-left: 20px;}
+                    &::placeholder{ color: #aaa; @include font( 16px, 300)}
+                    &:focus{
+                        outline: none;
+                        border-bottom: 2px solid $color;
                     }
                 }
-            }
-            .thankyou_message{
-                height: 30px; width: 100%; display: none
+                textarea{ 
+                    width: 100%; height: 180px; background: none;
+                    resize: none; padding: 20px; margin: 20px 0 10px 0;
+                    color: white; @include font( 16px, 300);
+                    border: 2px solid rgb(49, 49, 49);
+                    &::placeholder{ color: #aaa; @include font( 16px, 300)}
+                    &:focus{
+                        outline: none;
+                        border: 2px solid $color;
+                    }
+                }
+                button{ 
+                    background-color: $color;
+                    width: 100%; border: none;
+                    @include font(15px,500);
+                    @extend %fontTi; color: white;
+                    padding: 10px 0; transition: .5s;
+                    &:hover{ background-color: #0a57bb;}
+                }
             }
         }
+        .thankyou_message{
+            display: none
+        }
     }
-
 }
 
 
@@ -166,6 +163,182 @@ footer{
         article{
             small{ @include font(15px, 300); text-shadow: none; }
             h2{  @include font(40px, 400); text-shadow: none;}
+        }
+    }
+}
+@media(max-width: $pc){
+
+    .contact .come{
+        h2{
+            @include font(50px,200);
+            b{ @include font(50px,400) }
+        }
+        div{
+            @include font(20px, 300);
+            b{ @include font(20px, 500); }
+        }
+    }
+    .submit div article{
+        h2{ @include font(34px,200);
+            b{ @include font(34px,400); }
+        }
+        p{ @include font(17px, 300);
+            b{ @include font(17px, 300); }
+        }
+    }
+}
+
+@media(max-width: $tab){
+
+    body{ overflow: visible;}
+    .contact{
+        @include flex( center,center); flex-direction: column;
+        .come{ width: 90%;
+            h2{
+                @include font(52px,200);
+                b{ @include font(52px,400) }
+            }
+            div{
+                @include font(20px, 300);
+                b{
+                    @include font(20px, 500);
+                }
+            }
+        }
+        .five{ padding-top: 5vh; width: 90%;
+            a{  
+                @include flex( center, flex-start);
+                div{ order: 2;  width: auto; 
+                    padding-left: 20px; @include font(14px, 400); 
+                }
+                p{ order: 1; width: 20px; height: 20px; }
+
+                &:nth-of-type(1) p{ @include bgimg('../img/icon_mail2.png'); }
+                &:nth-of-type(2) p{ @include bgimg('../img/icon_phone2.png'); }
+                &:nth-of-type(3) p{ @include bgimg('../img/icon_git2.png'); }
+                &:nth-of-type(4) p{ @include bgimg('../img/icon_kakao2.png'); }
+                &:nth-of-type(5) p{ @include bgimg('../img/icon_insta2.png'); }
+            }
+        }
+    }
+    .submit{
+        background-color: #111;      
+        div{
+            width: 70%;
+            @include flex(flex-start,center); 
+            flex-direction: column;
+            article{
+                width: 100%; height: 40vh;
+                padding-top: 10vh; 
+                h2{ @include font(45px,200);
+                    b{ @include font(45px,400); }
+                }
+                p{ @include font(18px, 300);
+                    b{ @include font(19px, 300); }
+                }
+            }
+        }
+        form{
+            width: 100%; padding-bottom: 50px; 
+        }
+    }
+    footer{
+        height: 150px;
+        > a{
+            article{padding-top: 10px;
+                small{ @include font(10px, 300);}
+                h2{  @include font(25px, 400);}
+                .timebar{display: none;}
+            }
+        }
+    }
+}
+
+
+@media(max-width: $mobile){
+    .contact{
+        .come{ width: 90%;
+            h2{
+                @include font(23px,200);
+                b{ @include font(23px,400) }
+            }
+            div{
+                @include font(12px, 300);
+                b{
+                    @include font(12px, 500);
+                }
+            }
+        }
+        .five{ padding-top: 5vh; width: 90%;
+            a{  
+                @include flex( center, flex-start);
+                padding: 4px 0; 
+                div{ order: 2;  width: auto; 
+                    padding-left: 10px; @include font(10px, 400); 
+                }
+                p{ order: 1; width: 10px; height: 10px; }
+
+                &:nth-of-type(1) p{ @include bgimg('../img/icon_mail2.png'); }
+                &:nth-of-type(2) p{ @include bgimg('../img/icon_phone2.png'); }
+                &:nth-of-type(3) p{ @include bgimg('../img/icon_git2.png'); }
+                &:nth-of-type(4) p{ @include bgimg('../img/icon_kakao2.png'); }
+                &:nth-of-type(5) p{ @include bgimg('../img/icon_insta2.png'); }
+            }
+        }
+        .scroll-prompt {
+            position: absolute;
+            top: 90vh; left: 50%; transform: translateX(-50%);
+            width: 150px; height: 80px;
+            .scroll-prompt-arrow > div {
+                width: 20px; height: 20px;
+            }
+        }
+    }
+    .submit{  
+        div{
+            article{
+                padding-top: 10vh; 
+                height: 35vh;
+                h2{ @include font(20px,200);
+                    b{ @include font(20px,400); }
+                }
+                p{ @include font(10px, 300);
+                    b{ @include font(10px, 300); }
+                }
+            }
+        }
+        form{
+            width: 100%; padding-bottom: 10px; 
+            ul{
+                li{ margin: 5px 0;
+                    input{
+                        @include font( 12px, 300);
+                        padding: 5px 10px;
+                        &::placeholder{ color: #aaa; @include font( 10px, 300)}
+                        &:focus{
+                            outline: none;
+                            border-bottom: 2px solid $color;
+                        }
+                    }
+                    textarea{ 
+                        width: 100%; height: 20vh; background: none;
+                        resize: none; padding: 10px; margin: 3vh 0 10px 0;
+                        color: white; @include font( 10px, 300);
+                        &::placeholder{ @include font( 10px, 300)}
+                    }
+                    button{ 
+                        @include font(10px,500);
+                        padding: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        height: 80px;
+        > a article{
+            padding-top: 10px;
+            h2{  @include font(20px, 400);}
         }
     }
 }

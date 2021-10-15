@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
-html,body{margin: 0; min-width: 1280px;}
+html,body{margin: 0;}
 ul,li,ol{
     list-style-type: none;
     margin: 0;
@@ -25,6 +25,10 @@ video{ font-size: 0;}
 
 // ============ $color / @extend / @mixin ========================================================
 // ===============================================================================================
+
+$pc : 1280px;
+$tab : 1024px;
+$mobile : 700px;
 
 $color:#1a73e8;
 
@@ -76,6 +80,7 @@ $color:#1a73e8;
         text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
         -webkit-text-stroke: 2px white;
         transition: .5s; cursor: default;
+        white-space: pre-line;
         &:hover{
             color: white; 
             -webkit-text-stroke: none;
@@ -97,18 +102,18 @@ $color:#1a73e8;
             li{  white-space: pre-line; line-height: 1.7; @include font(16px, 300); }
             li:nth-of-type(1){ white-space: pre-line; padding-right: 50px; color: #aaa; }
             li:nth-of-type(2){
-                b{ color: $site; @include font(16px, 400);}
+                b{ color: $site; @include font(16px, 300);}
             }
         }
     }
     .right{ white-space: pre-line; height: 200px;
-        div:nth-of-type(1){ line-height: 1.7; @include font(16px, 400); 
-            b{ color: $site; @include font(16px, 400);}
+        div:nth-of-type(1){ line-height: 1.7; @include font(16px, 300); 
+            b{ color: $site; @include font(16px, 300);}
         }
         div:nth-of-type(2){ @include flex( center, flex-start); text-align: center;
             a{ padding: 12px 0; width: 200px;
                 margin-right: 30px; border-radius: 40px;
-                @include font(15px, 400); transition: .5s;
+                @include font(15px, 300); transition: .5s;
                 &:hover{ box-shadow: 3px 5px 10px rgba(0,0,0,0.2);
                     transform: translate(-2px, -2px);
                 }
@@ -124,9 +129,10 @@ $color:#1a73e8;
 // ========================= 프로젝트 기능 설명 ==================================================
 
 @mixin contit($site: #333333) {
-    white-space: pre-line; width: 30%;
+    white-space:inherit; width: 30%;
     h2{ @extend %fontTi; @include font(24px, 600); }
-    p{ line-height: 1.7; @include font(15px, 300);
+    p{ 
+        line-height: 1.7; @include font(15px, 300);
         b{ position: relative; @include font(15px, 500);
             color: $site; 
         }
@@ -198,126 +204,128 @@ $color:#1a73e8;
 // ======================================================================================
 
 body{
-    position: relative; width: 100%; min-width: 1280px; 
+    position: relative; width: 100%; 
     -ms-overflow-style: none;
     &::-webkit-scrollbar{display: none;}
 }
 header{ position: fixed; z-index: 30;
     width: 100%; height: 130px; 
-    .h{
-        & > div:nth-of-type(1){
-            width: 90%; height: 130px; margin: 0 auto;
-            @include flex();
-            .burger{
-                cursor: pointer; z-index: 30;
-                &.active{
-                    span:nth-of-type(1){ width: 30px; background-color: rgb(115, 115, 115);
-                        transform: rotate(-45deg) translateY(2px); }
-                    span:nth-of-type(2){ display: none;}
-                    span:nth-of-type(3){ width: 30px; background-color: rgb(115, 115, 115);
-                        transform: rotate(45deg) translateY(-2px); }
-                    &.active:hover{
-                        @extend .burger.active;
-                    }
-                }
-                &.black{ span{ background-color: white;} }
-                &:hover{
-                    span:nth-of-type(1){ width: 16px; }
-                    span:nth-of-type(2){ width: 27px; }
-                    span:nth-of-type(3){ width: 10px; }
-                }
+}
+// ========================= 픽스 상단 헤더 =============================================================
+.ttop{
+    width: 90%; height: 130px; margin: 0 auto;
+    @include flex();
+}
     
-                span{
-                    display: block; width: 28px; height: 3px;
-                    background-color: #111111; transition: 0.5s;
-                }
-                & > span:nth-of-type(2){ margin: 7px 0; width: 14px; }
-                & > span:nth-of-type(3){ width: 22px; }
+.burger{
+    cursor: pointer; z-index: 30;
+    width: 30px;
+    &.active{
+        span:nth-of-type(1){ width: 100%; background-color: rgb(115, 115, 115);
+            transform: rotate(-45deg) translateY(2px); }
+        span:nth-of-type(2){ display: none;}
+        span:nth-of-type(3){ width: 100%; background-color: rgb(115, 115, 115);
+            transform: rotate(45deg) translateY(-2px); }
+        &.active:hover{
+            @extend .burger.active;
+        }
+    }
+    &.black{ span{ background-color: white;} }
+    &:hover{
+        span:nth-of-type(1){ width: 51%; }
+        span:nth-of-type(2){ width: 90%; }
+        span:nth-of-type(3){ width: 30%; }
+    }
+
+    span{
+        display: block; width: 93%; height: 3px;
+        background-color: #111111; transition: 0.5s;
+    }
+    & > span:nth-of-type(2){ margin: 7px 0; width: 49%; }
+    & > span:nth-of-type(3){ width: 70%; }
+}
+.logo{
+    width: 45px; height: 58px; display: block;
+    margin-top: 10px;
+    @include bgimg('../img/logo1.png');
+    &.black{ @include bgimg('../img/logo2.png'); }
+}
+
+// ========================= 버거메뉴 =============================================================
+
+.menu{
+    width: 60%; height: 100vh;
+    position: absolute; left: -100%; top: 0;
+    background: #111111; transition: .5s; z-index: 29;
+    &.active {
+        position: absolute; left: 0; top: 0;
+    }
+
+    > div{ //about, project, contact
+        width: 80%; margin: 0 auto; padding: 150px 0 80px 0;
+        span{ transition: .5s; overflow: hidden; width: 50%;
+            height: 110px; display: block; margin: 25px 0;
+            a{
+                display: block; color: white; font-size: 80px;
+                @extend %fontEn; transition: .5s;
+                &:nth-of-type(2){ color: $color;}
             }
-            .logo{
-                width: 45px; height: 58px; display: block;
-                margin-top: 10px;
-                @include bgimg('../img/logo1.png');
-                &.black{ @include bgimg('../img/logo2.png'); }
+            
+        }
+    }
+    ul{ width: 70%; min-width: 400px; max-width: 500px; margin-left: 10%;
+        &::before{ content: ''; display: block; width: 100%;
+            border-top: 2px solid $color; margin-bottom: 40px;
+        }
+        li:nth-of-type(1){ 
+            display: flex;
+            > div{ 
+                margin-bottom: 35px;
+                span{display: block; color: rgb(103, 103, 103);
+                    @include font( 15px, 600); margin-bottom: 5px;
+                }
+                p{ color: white; @include font( 15px, 400);}
+                &:nth-of-type(1){ margin-right: 66px;}
             }
         }
-    
-        // ========================= 버거메뉴 =============================================================
-
-        .menu{
-           width: 60%; height: 100vh;
-           position: absolute; left: -60%; top: 0;
-           background: #111111; transition: .5s; z-index: 29;
-            &.active {
-                position: absolute; left: 0; top: 0;
-            }
-    
-            > div{ //about, project, contact
-                width: 80%; margin: 0 auto; padding: 150px 0 80px 0;
-                span{ transition: .5s; overflow: hidden; width: 50%;
-                    height: 110px; display: block; margin: 25px 0;
-                    a{
-                        display: block; color: white; font-size: 80px;
-                        @extend %fontEn; transition: .5s;
-                        &:nth-of-type(2){ color: $color;}
-                    }
-                    
+        li:nth-of-type(2){ //sns 아이콘
+            @include flex( flex-start, flex-start);
+            a{ margin-right: 22px; width: 22px; height: 22px; display: block;
+                &:nth-of-type(1){ 
+                    @include bgimg(); transition: .5s;
+                    &:hover{ @include bgimg('../img/icon_mail2.png'); }
                 }
-            }
-            ul{ width: 70%; min-width: 400px; max-width: 500px; margin-left: 10%;
-                &::before{ content: ''; display: block; width: 100%;
-                    border-top: 2px solid $color; margin-bottom: 40px;
+                &:nth-of-type(2){ 
+                    @include bgimg('../img/icon_git1.png'); transition: .5s;
+                    &:hover{ @include bgimg('../img/icon_git2.png');}
                 }
-                li:nth-of-type(1){ 
-                    display: flex;
-                    > div{ 
-                        margin-bottom: 35px;
-                        span{display: block; color: rgb(103, 103, 103);
-                            @include font( 15px, 600); margin-bottom: 5px;
-                        }
-                        p{ color: white; @include font( 15px, 400);}
-                        &:nth-of-type(1){ margin-right: 66px;}
-                    }
+                &:nth-of-type(3){ 
+                    @include bgimg('../img/icon_kakao1.png'); transition: .5s;
+                    &:hover{ @include bgimg('../img/icon_kakao2.png');}
                 }
-                li:nth-of-type(2){ //sns 아이콘
-                    @include flex( flex-start, flex-start);
-                    a{ margin-right: 22px; width: 22px; height: 22px; display: block;
-                        &:nth-of-type(1){ 
-                            @include bgimg(); transition: .5s;
-                            &:hover{ @include bgimg('../img/icon_mail2.png'); }
-                        }
-                        &:nth-of-type(2){ 
-                            @include bgimg('../img/icon_git1.png'); transition: .5s;
-                            &:hover{ @include bgimg('../img/icon_git2.png');}
-                        }
-                        &:nth-of-type(3){ 
-                            @include bgimg('../img/icon_kakao1.png'); transition: .5s;
-                            &:hover{ @include bgimg('../img/icon_kakao2.png');}
-                        }
-                        &:nth-of-type(4){ 
-                            @include bgimg('../img/icon_insta1.png'); transition: .5s;
-                            &:hover{ @include bgimg('../img/icon_insta2.png');}
-                        }
-                        
-                    }
+                &:nth-of-type(4){ 
+                    @include bgimg('../img/icon_insta1.png'); transition: .5s;
+                    &:hover{ @include bgimg('../img/icon_insta2.png');}
                 }
+                
             }
         }
     }
-
 }
 
-.mail{ z-index: 30; height: 55px; 
-    position: fixed; right: 2%; top: 200px;
-    transform: rotate(90deg); 
+.mail{ z-index: 25; height: 55px; 
+    position: fixed; right: 5%; top: 140px;
     div{cursor: pointer;
         > a{ display: block; cursor: pointer;
             @include flex(flex-start,center);
+            writing-mode: vertical-rl;
             p{ @include font(14px, 400); letter-spacing: 3px; transition: .5s;
+                
                 b{ @extend %fontEn; @include font(19px, 500); color:$color; }
             }
-            figure{ width:18px; height: 18px; margin:4px 0 0 10px;
+            figure{ width:18px; height: 18px; margin:10px 4px 0 0;
                 display: block; transition: .5s;
+                transform: rotate(90deg); 
                 @include bgimg('../img/icon_contact1.png');
             }
         }
@@ -339,8 +347,130 @@ header{ position: fixed; z-index: 30;
 }
 
 ::selection{
-    background: $color; color: white;
+    background: #111111; color: white;
 }
+
+
+
+
+
+
+@media(max-width: $pc){
+    .menu{ width: 70%; }
+}
+
+
+@media(max-width: $tab){
+    .menu{
+        width: 100%; height: 100vh;
+    
+        > div{ //about, project, contact
+            padding: 13vh 0 7vh 0;
+            span{ height: auto; overflow: visible;
+                a{ font-size: 90px;
+                    &:nth-of-type(2){ display: none;}
+                }
+            }
+        }
+        ul{ width: 70%; min-width: none; max-width: none;
+            li:nth-of-type(1){ 
+                display: flex;
+                > div{ 
+                    span{ @include font( 18px, 600); }
+                    p{ color: white; @include font( 18px, 400);}
+                    &:nth-of-type(1){ margin-right: 10%;}
+                }
+            }
+            li:nth-of-type(2){ //sns 아이콘
+                @include flex( flex-start, flex-start);
+                a{ margin-right: 5%; width: 25px; height: 25px; }
+            }
+        }
+    }
+}
+
+@media(max-width: $mobile){
+    .menu{
+        width: 100%; height: 100vh;
+
+        > div{ //about, project, contact
+            padding: 14vh 0 10vh 0;
+            span{ margin: 1.5vh 0;
+                a{ font-size: 2.5em;
+                    &:nth-of-type(2){ display: none;}
+                }
+            }
+        }
+        ul{ width: 100%; min-width: none; max-width: none;
+            &::before{ width: 65%; }
+            li:nth-of-type(1){ 
+                display: inherit;
+                > div{ margin-bottom: 25px;
+                    span{ @include font( 10px, 600); }
+                    p{ @include font( 10px, 400);}
+                    &:nth-of-type(1){ margin-right: 0; margin-bottom: 15px;}
+                }
+            }
+            li:nth-of-type(2){ //sns 아이콘
+                a{ margin-right: 3%; width: 15px; height: 15px; }
+            }
+        }
+        
+    }
+
+    .ttop{ width: 85%; height: 80px; }
+    .burger{
+        width: 22px;
+        &.active{
+            span:nth-of-type(1){ transform: rotate(-45deg) translateY(1px); }
+            span:nth-of-type(3){ transform: rotate(45deg) translateY(-1px); }
+        }
+        span{ display: block; width: 93%; height: 2px; }
+        & > span:nth-of-type(2){ margin: 4px 0; width: 49%; }
+    }
+    .logo{
+        width: 19px; height: 27px; display: block;
+        margin-top: 0;
+        @include bgimg('../img/logo1.png');
+        background-position: top top;
+    }
+
+
+    .mail{ z-index: 20; height: 55px; 
+        position: fixed; right: 5%; top: 85px;
+        div > a{
+            display: block; cursor: pointer;
+            @include flex(flex-start,center);
+            writing-mode: vertical-rl;
+                p{ @include font(9px, 400); letter-spacing: 2px;
+                    b{ @include font(12px, 500); }
+                }
+                figure{ width:12px; height: 12px; margin:5px 2px 0 0;
+                }
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ============ animation ========================================================
 // ===============================================================================
@@ -373,4 +503,7 @@ header{ position: fixed; z-index: 30;
     100% { transform: translateY(30px); }
 }
 
-
+@keyframes load {
+    0%{ transform: translateY(-100%);}
+    100%{ transform: translateY(0%);}
+}

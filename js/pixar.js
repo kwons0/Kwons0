@@ -1,7 +1,20 @@
 let timer;
+const mql = window.matchMedia("screen and (max-width: 1024px)");
 
 $(document).ready(function() {
  $('.start').css({ 'opacity':'1', 'transform' : 'translateY(0px)'})
+});
+
+$(document).on("touchstart",function(){
+    var scrollTop = $(window).scrollTop();
+  
+    if( mql.matches ){
+        if( scrollTop > 100 ){
+            $('.start p').addClass('active');
+        }else{
+            $('.start p').removeClass('active');
+        }
+    }
 });
 
 
@@ -13,25 +26,23 @@ $(document).scroll(function() {
         scrollTop = $(window).scrollTop();
 
     // 메인 이미지 width 조정
-    if( ( innerHeight - scrollTop ) <  ($('.detail').offset().top -30) ){
-        $('.start p').addClass('active');
-    }else{
-        $('.start p').removeClass('active');
+    if( !mql.matches ){
+        if( ( innerHeight - scrollTop ) <  ($('.detail').offset().top -30) ){
+            $('.start p').addClass('active');
+        }else{
+            
+            $('.start p').removeClass('active');
+        }
     }
+
     // 배경 바뀔 때 헤더 색 변경
     if( scrollTop >= $('.row2').offset().top ){
-        $('.burger').addClass('black')
-        $('.logo').addClass('black')
-        $('.mail').addClass('black')
+        $('.burger, .logo, .mail').addClass('black')
         if( scrollTop >= $('.row3').offset().top ){
-            $('.burger').removeClass('black')
-            $('.logo').removeClass('black')
-            $('.mail').removeClass('black')
+            $('.burger, .logo, .mail').removeClass('black')
         }
     }else{
-        $('.burger').removeClass('black')
-        $('.logo').removeClass('black')
-        $('.mail').removeClass('black')
+        $('.burger, .logo, .mail').removeClass('black')
     }
 
 
@@ -77,6 +88,7 @@ $(document).scroll(function() {
     // next 푸터 타임바
     clearTimeout(timer);
 
+    if( mql.matches ) return;
     if( scrollTop + innerHeight < ($('footer').offset().top + ($('footer').height()/3)) ){
         $('.timebar span').removeClass('active');
         $('.timebar span').css({ 'transition' : '0s'})

@@ -37,9 +37,9 @@ body{ position: relative; overflow: hidden;}
             } 
         }
         figure{ // message bubble
-            height: 70vh; width: 70%;
+            height: 70vh; width: 50%;
             padding-top: 20vh;
-            p{ width: 70%;
+            p{ width: 100%;
                 margin: 20px 0;
                 margin-left: -35px;
                 opacity: 0;
@@ -139,11 +139,8 @@ body{ position: relative; overflow: hidden;}
             b{ @include font( 18px, 500);
                 &:nth-of-type(1){ color: $color;}
                 &:nth-of-type(5){ position: relative;}
-                &:nth-of-type(5)::before{ 
-                    content: ''; display: block; 
-                    width: 445px; height: 15px; 
+                &:nth-of-type(5){ 
                     background-color: #1a73e836;
-                    position: absolute; left:0; bottom: 0;
                 }
             }
         }
@@ -203,15 +200,240 @@ footer{
 }
 @media(max-width: 1480px){
     .intro{  width: 85%;
+        .hello figure{// message bubble
+            height: 70vh; width: 55%;
+            padding-top: 20vh;
+        }
     }
+
     .tool{ padding-top: 4vh !important;}
     .write{
         padding-top: 80px;
     }
 }
 
-@media(max-width: 1280px){
+
+
+@media(max-width: $pc){
+    .intro .hello figure{// message bubble
+        height: 70vh; width: 60%;
+        padding-top: 20vh;
+    }
     .write{
         figure{ display: none; }
+    }
+}
+
+
+@media(max-width: $tab){
+    body{ overflow: visible;}
+
+    .intro{
+        width: 100%; height: auto;
+        margin: 0 auto; 
+        @include flex( center,center);
+        flex-direction: column;
+        .hello{
+            order: 2;
+            position: relative;
+            text-align: center;
+            > div:nth-of-type(1){ //안녕하세요
+                height: auto; width: 100%;
+                padding-top: 10vh;
+                @include font(60px,200);
+                b{ @include font(60px,400);
+                    &:nth-of-type(1){ display: none; font-size: 0;}
+                    &:nth-of-type(2){ color: $color;  @include font(60px,500)}
+                }
+                span{ // 손 이모지
+                    display: none;
+                } 
+            }
+            figure{ // message bubble
+                height: auto; width: 45%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                padding-top: 0;
+                p{ width: 100%;
+                    margin-left: 0;
+                    opacity: 1;
+                    transform: translate(0,0);
+                }
+            }
+            h2{ // 제가~
+                height: auto; width: 100%;
+                @include font(25px, 300);
+                opacity: 1;
+                margin-bottom: 15vh;
+                b{ @include font(25px, 500); }
+            }
+        }
+        .face{ 
+            order: 1;
+            position : inherit;
+            transform: translateY(0);
+            margin-top: 20vh;
+            figure{
+                min-width: 400px; min-height: 400px;
+            }
+            p{ opacity: 1; 
+                &:nth-of-type(1){
+                    font-size: 80px;
+                    position: absolute; left: -60px; top: 0;
+                }
+                &:nth-of-type(2){
+                    font-size: 120px;
+                    position: absolute; right: -25%; bottom: -80px;
+                }
+            }
+        }
+    }
+    .scroll-prompt{ display: none;}
+    .write{
+        width: 100%; height: auto; margin: 0 auto;
+        padding: 10vh 0;
+        article{
+            width: 85%; padding-left: 0; margin: 0 auto;
+            // text-align: center;
+            h2{ @include font(36px, 600); color: $color; }
+            p{ 
+                line-height: 1.5; white-space: pre-line;
+                @include font( 18px, 300);
+                b{ @include font( 18px, 500); }
+            }
+        }
+        .resume{ margin-top: 3vh;  }
+    }
+    footer{
+        height: 150px;
+        > a{
+            article{padding-top: 10px;
+                small{ @include font(10px, 300);}
+                h2{  @include font(25px, 400);}
+                .timebar{display: none;}
+            }
+        }
+    }
+}
+
+@media(max-width: 800px){
+    .intro{
+        .hello{
+            > div:nth-of-type(1){ //안녕하세요
+                @include font(45px,200);
+                b{ @include font(45px,400);
+                    &:nth-of-type(2){ color: $color;  @include font(45px,500)}
+                }
+            }
+            figure{ // message bubble
+                width: 70%;
+            }
+            h2{ // 제가~
+                margin-bottom: 18vh;
+            }
+        }
+        .face{
+            margin-top: 20vh;
+            figure{
+                min-width: 250px; min-height: 250px;
+            }
+        }
+    }
+    .write{
+        width: 100%; height: auto; margin: 0 auto;
+        padding: 10vh 0;
+        article{
+            width: 70%;
+        }
+    }
+}
+
+@media(max-width: $mobile){
+    .intro{
+        .hello{
+            > div:nth-of-type(1){ //안녕하세요
+                @include font(30px,200);
+                b{ @include font(30px,400);
+                    &:nth-of-type(2){ @include font(30px,500)}
+                }
+            }
+            figure{ // message bubble
+                height: auto; width: 80%;
+                margin: 6vh auto;
+                p{ width: 100%;
+                    margin: 20px auto;
+                    margin-left: 0;
+                    img{ width: 100%;}
+                }
+            }
+            h2{ // 제가~
+                height: auto; width: 80%;
+                margin: 0 auto;
+                @include font(15px, 300);
+                opacity: 1;
+                margin-bottom: 18vh;
+                b{ @include font(15px, 500); }
+            }
+        }
+        .face{ 
+            margin-top: 20vh;
+            figure{
+                min-width: 100px; min-height: 100px;
+                width: 200px; height: 200px;
+            }
+            p{ 
+                &:nth-of-type(1){
+                    font-size: 50px;
+                    position: absolute; left: -30px; top: 0;
+                }
+                &:nth-of-type(2){
+                    font-size: 60px;
+                    position: absolute; right: -15%; bottom: -20%;
+                }
+            }
+        }
+    }
+    .write{
+        width: 100%; height: auto; margin: 0 auto;
+        padding: 10vh 0;
+        article{
+            width: 70%; padding-left: 0; margin: 0 auto;
+            // text-align: center;
+            h2{ @include font(25px, 600); color: $color; }
+            p{ 
+                line-height: 1.5; white-space: pre-line;
+                @include font( 14px, 300);
+                b{ @include font( 14px, 500); }
+            }
+        }
+        .tool{
+            text-align: start; padding-top: 8vh;
+            width: 70%; margin: 0 auto;
+            div{ display: block;
+                margin: 10px 0;
+                span{ background: rgba(#7b7b7b, 0.2); color: #5d5d5d;
+                    padding: 2px 15px; @include font(12px,400); 
+                    border-radius:40px;
+                }
+                p{ margin-left: 0; 
+                    margin-top: 10px;
+                    @include font(13px,400); 
+                }
+            }
+            figure{
+                width: 45%; margin: 0 auto; margin-top: 6vh; 
+                img{ width: 100%;}
+            }
+        }
+        .resume{ margin-top: 3vh; @include font(10px,400);
+            width: 50%; 
+        }
+    }
+    footer{
+        height: 80px;
+        > a article{
+            padding-top: 10px;
+            h2{  @include font(20px, 400);}
+        }
     }
 }

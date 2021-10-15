@@ -1,4 +1,5 @@
 let timer;
+const mql = window.matchMedia("screen and (max-width: 1024px)");
 
 $(document).ready(function() {
     $('.start').css({ 'opacity':'1', 'transform' : 'translateY(0px)'})
@@ -46,7 +47,7 @@ $(document).scroll(function() {
 
     // next 푸터 타임바
     clearTimeout(timer);
-
+    if( mql.matches )return;
     if( scrollTop + innerHeight < ($('footer').offset().top + ($('footer').height()/3)) ){
         $('.timebar span').removeClass('active');
         $('.timebar span').css({ 'transition' : '0s'})

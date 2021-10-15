@@ -2,334 +2,456 @@
 @import '_common.scss';
 
 body{
+    width: 100%;
     position: relative;
     overflow: hidden;
+}
 
-
-    .loading{
-        position: fixed;
+.loading{
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    background-color: #111;
+    z-index: 100;
+    text-align: center;
+    .loadBg{
+        position: absolute;
         left: 0; top: 0;
         width: 100%; height: 100vh;
-        background-color: #111;
-        z-index: 100;
+        background-color: white;
+        transform: translateY(-100%);
+        z-index: 102;
+        &.active{ 
+            animation: load 1s forwards;
+        }
+    }
+    article{
+        position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        h1{
+            @include font(120px,400);
+            @extend %fontEn;
+            color: rgba(0,0,0,0);
+            -webkit-text-stroke: 1.5px white;
+            transition: .5s;
+            line-height: 1;
+        }
+        h3{
+            @extend h1;
+            height: 120px;
+            &:nth-of-type(1){ display: none;}
+        }
+        p{
+            color: $color; @include font(30px,300);
+            font-style: italic; @extend %fontTi;
+            margin-top: 30px;
+        }
+    }
+    .typing {  
+        display: inline-block; 
+        animation: cursor .5s infinite;
+        @keyframes cursor{ 
+            0%{border-right: 1px solid #fff} 
+            50%{border-right: 1px solid #000} 
+            100%{border-right: 1px solid #fff} 
+        }
+    } 
+}
+
+// =========== 메일
+.ps{ z-index: 20;
+    position: fixed; left: 5%; bottom: 50px;
+    @include font( 14px, 400);
+    &.fixedOn{
+        position: fixed; left: 5%; bottom: 350px;
+    }
+    &.black{ color: rgba(white, 0.3);}
+}
+
+// =========== 스크롤 안내 화살표
+.scroll-prompt {
+    position: absolute;
+    top: 90vh; left: 50%; transform: translateX(-50%);
+    width: 160px; height: 100px;
+
+    .scroll-prompt-arrow-container {
+        position: absolute;
+        top: 0; left: 50%; transform: translateX(-50%);
+        animation: bounce 1.5s infinite;
+    }
+    .scroll-prompt-arrow {
+        animation: opaci 1.5s infinite;
+    }
+    .scroll-prompt-arrow:last-child {
+        animation-direction: reverse;
+        margin-top: -15px;
+    }
+    .scroll-prompt-arrow > div {
+        width: 30px; height: 30px;
+        border-right: 2px solid #bebebe;
+        border-bottom: 2px solid #bebebe;
+        transform: rotate(45deg) translateZ(1px);
+    }
+}
+
+// =========== top버튼
+.top{
+    position: fixed; right: calc( 5% - 4px); bottom: 240px; 
+    z-index: 20;
+    span{@include font( 14px, 400);
+        @extend %fontTi;
+        color: rgba(white, 0.6);
+        transform: translate(-20px, -50%);
+        opacity: 0; cursor: default; transition: .5s; 
+        position: absolute; left: 0px; top: 50%;
+    }
+    a{ color: rgba(white, 0.3);  z-index: 25;
+        transition: .5s; cursor: pointer;
+    }
+    &:hover a{ color: white;}
+    &:hover span{ 
+        opacity: 1;
+        transform: translate(-35px, -50%);
+    }
+    &.fixedOn{
+        position: fixed; right: calc( 5% - 4px); bottom: 540px;
+    }
+}
+
+// =========== 네비게이션
+.nav{ z-index: 30;
+    position: fixed; right: 5%; bottom: 50px; 
+    &.fixedOn{
+        position: fixed; right: 5%; bottom: 350px;
+    }
+    p{
+        position: relative;
+        span{
+            @include font( 14px, 400);
+            @extend %fontTi; 
+            color: rgba(white, 0.6); transform: translate(0px, -50%);
+            opacity: 0; cursor: default; transition: .5s;
+            position: absolute; left: -60px; top: 50%;
+        }
+        &:hover span{ 
+            opacity: 1;
+            transform: translate(-15px, -50%);
+        }
+        &:hover a{ background: white;}
+
+        a{
+            display: block; width: 10px; height: 10px;
+            background-color: rgba(white, 0.3); border-radius: 5px;
+            margin: 23px 0; cursor: pointer;
+            transition: .5s; z-index: 10;
+            &.active{ height: 17px; background: white;}
+        }
+    }
+}
+
+// ============================ 메인 ================================================
+// =================================================================================
+.warp{
+    width: 100%;
+    transition: all 0.5s ease 0s;
+}
+
+.main{
+    @include flex( center,center);
+    width: 90%; margin: 0 auto;
+    height: 100vh;
+    figure{
+        margin-right: 150px;
+        width: 30%;
         text-align: center;
-        // transition: 1s ease;
-        .loadBg{
-            position: absolute;
-            left: 0; top: 0;
-            width: 100%; height: 100vh;
-            background-color: white;
-            transform: translateY(-100%);
-            z-index: 102;
-            &.active{ 
-                animation: load 1s forwards;
-                @keyframes load {
-                    0%{ transform: translateY(-100%);}
-                    100%{ transform: translateY(0%);}
+        p{ width: 90%; margin: 0 auto;
+            position: relative;
+            video{ width: 100%; margin-left: -20px;}
+            img{ width: 26%; position: absolute; right: 30px; bottom: 0;}
+        }
+        figcaption{ 
+            width: 100%;
+            margin-top: 20px;
+            line-height: 1.1;
+            @include font(68px,300);
+            b{ @include font(68px,600)}
+        }
+    }
+    h2{
+        position: relative;
+        padding-top: 5vh;
+        p{ @include font(83px,200); 
+            color: $color ; line-height: 1.3;
+            white-space: pre-line;
+            b{ @include font(83px,500); 
+                color: $color; line-height: 1.3;
+            }
+            &:nth-of-type(1){ 
+                position: absolute; left: -40px; top: calc(-40px + 5vh);
+            }
+        }
+        .hello{ 
+            height: 100px; 
+            overflow: hidden;
+            ul{
+                li{
+                    @include font(83px,500); 
+                    color: $color;
+                    display: block;
                 }
             }
         }
-        article{
-            position: absolute; left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            h1{
-                @include font(120px,400);
-                @extend %fontEn;
+    }
+}
+
+
+// ============================ 프로젝트 ================================================
+// =================================================================================
+
+.project{
+    @include flex(flex-start,flex-start); flex-shrink: 0;
+    // overflow: hidden;
+    width: 100%;
+    transition: .5s;
+
+    .pro3{ @include bgimg('../img/market_main3.jpg'); }
+    .pro5{ @include bgimg('../img/design_main.jpg'); }
+
+    .sl{
+        width: 100%; height: 100vh;
+        position: relative;
+        display: flex;  align-items: center; justify-content: center; flex-shrink: 0;
+        &::before{
+            content: ''; display: block; width: 100%; height: 100vh;
+            position: absolute; left: 0; top: 0;
+            background-color: rgba(0,0,0,0.6);
+        }
+        > div{ width: 100%; height: 100vh;
+            video{ width: 100%; height: 100vh; object-fit: cover;}
+        }
+    }
+        
+    article{ position: absolute; left: 10%; bottom: 20%;
+        a{ 
+            @include font(70px, 400); 
+            color:white;
+            @extend %fontEn; line-height: 1;
+            &:hover{
                 color: rgba(0,0,0,0);
                 -webkit-text-stroke: 1.5px white;
                 transition: .5s;
-                line-height: 1;
-            }
-            h3{
-                @extend h1; height: 120px;
-                &:nth-of-type(1){ display: none;}
-            }
-            p{
-                color: $color; @include font(30px,300);
-                font-style: italic; @extend %fontTi;
-                margin-top: 30px;
             }
         }
-        .typing {  
-            display: inline-block; 
-            animation: cursor .5s infinite;
-            @keyframes cursor{ 
-                0%{border-right: 1px solid #fff} 
-                50%{border-right: 1px solid #000} 
-                100%{border-right: 1px solid #fff} 
-            }
-        } 
-    }
-
-
-
-    // =========== 메일
-    .ps{ z-index: 20;
-        position: fixed; left: 5%; bottom: 50px;
-        @include font( 14px, 400);
-        &.fixedOn{
-            position: fixed; left: 5%; bottom: 350px;
+        > span{ 
+            @include font(40px, 400); 
+            @extend %fontEn; 
+            line-height: 1; 
+            color: rgba(0,0,0,0);
+            -webkit-text-stroke: 2px white;
+            transition: .5s;
+            opacity: 0;
         }
-        &.black{ color: rgba(white, 0.3);}
-    }
-
-    // =========== 스크롤 안내 화살표
-    .scroll-prompt {
-        position: absolute;
-        top: 90vh; left: 50%; transform: translateX(-50%);
-        width: 160px; height: 100px;
-    
-        .scroll-prompt-arrow-container {
-            position: absolute;
-            top: 0; left: 50%; transform: translateX(-50%);
-            animation: bounce 1.5s infinite;
+        .timeBar{ 
+            width: 500px; height: 3px;
+            background-color: rgba(255,255,255,0.2);
+            position: relative; margin: 20px 0;
+                span{ 
+                    display: block;
+                    width: 0; height: 3px;
+                    background-color: white;
+                }
         }
-        .scroll-prompt-arrow {
-            animation: opaci 1.5s infinite;
+        p:nth-of-type(1){ color: #aaa; font-style: italic; 
+            @include font(16px, 400); 
         }
-        .scroll-prompt-arrow:last-child {
-            animation-direction: reverse;
-            margin-top: -15px;
-        }
-        .scroll-prompt-arrow > div {
-            width: 30px; height: 30px;
-            border-right: 2px solid #bebebe;
-            border-bottom: 2px solid #bebebe;
-            transform: rotate(45deg) translateZ(1px);
-        }
-    }
-
-    // =========== top버튼
-    .top{
-        position: fixed; right: calc( 5% - 4px); bottom: 240px; 
-        z-index: 20;
-        span{@include font( 14px, 400); color: rgba(white, 0.6);
-            @extend %fontTi; transform: translate(-20px, -50%);
-            opacity: 0; cursor: default; transition: .5s; 
-            position: absolute; left: 0px; top: 50%;
-        }
-        a{ color: rgba(white, 0.3);  z-index: 25;
-            transition: .5s; cursor: pointer;
-        }
-        &:hover a{ color: white;}
-        &:hover span{ 
-            opacity: 1;
-            transform: translate(-35px, -50%);
-        }
-        &.fixedOn{
-            position: fixed; right: calc( 5% - 4px); bottom: 540px;
-        }
-    }
-
-    // =========== 네비게이션
-    .nav{ z-index: 30;
-        position: fixed; right: 5%; bottom: 50px; 
-        &.fixedOn{
-            position: fixed; right: 5%; bottom: 350px;
-        }
-        p{
-            position: relative;
-            span{
-                @include font( 14px, 400); color: rgba(white, 0.6);
-                @extend %fontTi; transform: translate(0px, -50%);
-                opacity: 0; cursor: default; transition: .5s;
-                position: absolute; left: -60px; top: 50%;
-            }
-            &:hover span{ 
-                opacity: 1;
-                transform: translate(-15px, -50%);
-            }
-            &:hover a{ background: white;}
-
-            a{
-                display: block; width: 10px; height: 10px;
-                background-color: rgba(white, 0.3); border-radius: 5px;
-                margin: 23px 0; cursor: pointer;
-                transition: .5s; z-index: 10;
-                &.active{ height: 17px; background: white;}
+        .tool{ 
+            height: 28px; overflow: hidden;
+            small{ color: white; display: block; margin: 5px 0;
+                transition: .5s;
             }
         }
     }
+}
 
-    // ============================ 메인 ================================================
-    // =================================================================================
-    .warp{
-        // position: fixed; left: 0; top: 0; 
-        width: 100%;
-        transition: all 0.5s ease 0s;
+// ============================ 푸터 ================================================
+// =================================================================================
+
+footer{
+    width: 100%; height: 300px;  background: #111111;
+    > div{
+        width: 90%; height: 100%; margin: 0 auto;
+        @include flex();
+        .left{ @include flex(flex-end,flex-start);
+            p{ width: 62px; margin-right: 20px; img{width: 100%;}}
+            small{ margin-bottom: -30px; color:rgb(112, 112, 112); 
+                @include font( 16px, 300);
+            }
+        }
+        .right{
+            div{ @include flex(); 
+                span{
+                    display: block; height: 60px; overflow: hidden;
+                    @include flex(); flex-direction: column;
+                    a{
+                        @extend %fontEn;; transition: .5s;
+                        @include font(42px,400); color: white;
+                        &:nth-of-type(2){ color: $color;}
+                    }
+                    &:nth-of-type(2){  margin: 0 70px; }
+                }
+            }
+            > p{
+                width:100%; height: 2px; background: rgb(103, 103, 103);
+                margin: 20px 0;
+            }
+            ul{ @include flex(); 
+                li{
+                    span{display: block; color: rgb(103, 103, 103);
+                        @include font( 13px, 600); margin-bottom: 5px;
+                    }
+                    p{ color: white; @include font( 14px, 300);}
+                }
+                li:nth-of-type(3){ //sns 아이콘
+                    @include flex( flex-start, flex-start);
+                    a{ margin-right: 20px; width: 20px; height: 20px; display: block;
+                        &:nth-of-type(1){ 
+                            @include bgimg(); transition: .5s;
+                            &:hover{ @include bgimg('../img/icon_mail2.png'); }
+                        }
+                        &:nth-of-type(2){ 
+                            @include bgimg('../img/icon_git1.png'); transition: .5s;
+                            &:hover{ @include bgimg('../img/icon_git2.png');}
+                        }
+                        &:nth-of-type(3){ 
+                            @include bgimg('../img/icon_kakao1.png'); transition: .5s;
+                            &:hover{ @include bgimg('../img/icon_kakao2.png');}
+                        }
+                        &:nth-of-type(4){ 
+                            @include bgimg('../img/icon_insta1.png'); transition: .5s; margin-right: 0;
+                            &:hover{ @include bgimg('../img/icon_insta2.png');}
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media(max-width: $pc){
+    .main{
+        figure figcaption{
+            @include font(55px,300);
+                b{ @include font(55px,600)}
+        }
+        h2{
+            p{ @include font(75px,200);
+                b{ @include font(75px,500);}
+            }
+            .hello ul li{ 
+                @include font(75px,500);
+            }
+        }
+    }
+}
+
+
+@media(max-width: $tab){
+    body{
+        width: 100%; height: 100vh;
+        overflow: hidden;
+    }
+    .loading{
+        article{
+            h1{ @include font(80px,400);}
+            h3{ height: 80px; }
+            p{ @include font(30px,300);}
+        }
     }
 
     .main{
-        @include flex( center,center);
+        flex-direction: column;
         width: 90%; margin: 0 auto;
-        height: 100vh;
         figure{
-            margin-right: 150px;
-            width: 30%;
+            margin-right: 0;
+            width: 100%;
             text-align: center;
-            p{ width: 90%; margin: 0 auto;
-                position: relative;
-                video{ width: 100%; margin-left: -20px;}
-                img{ position: absolute; right: 30px; bottom: 0;}
-            }
+            p{ width: 50%; margin: 0 auto;}
             figcaption{ 
                 width: 100%;
-                margin-top: 20px;
-                line-height: 1.1;
-                @include font(68px,300);
-                b{ @include font(68px,600)}
+                margin-top: 3vh;
+                white-space: inherit;
+                @include font(40px,300);
+                b{ @include font(40px,600)}
             }
         }
         h2{
-            position: relative;
             padding-top: 5vh;
-            p{ @include font(83px,200); color: $color ; line-height: 1.3;
-                b{ @include font(83px,500); color: $color; line-height: 1.3;}
-                &:nth-of-type(1){ 
-                    position: absolute; left: -40px; top: calc(-40px + 5vh);
-                }
+            text-align: center;
+            p{ @include font(65px,200); 
+                white-space:inherit;
+                line-height: 1.3;
+                b{ @include font(65px,500); line-height: 1.3;}
+                &:nth-of-type(1){  display: none; }
             }
             .hello{ 
-                height: 100px; 
-                overflow: hidden;
-                ul{
-                    li{
-                        @include font(83px,500); color: $color;
-                        display: block;
-                    }
-                }
+                height: 80px; line-height: 1.3;
+                ul li{  @include font(65px,500); }
             }
         }
     }
+    .scroll-prompt { display: none;}
+    .project{ display: none; }
+    footer{ display: none;}
 
-    // ============================ 프로젝트 ================================================
-    // =================================================================================
+}
 
-    .project{
-        @include flex(flex-start,flex-start); flex-shrink: 0;
-        // overflow: hidden;
-        width: 100%;
-        transition: .5s;
-
-        // .pro1{ @include bgimg('../img/pixar_main.jpg'); }
-        // .pro2{ @include bgimg('../img/pizza_main.jpg'); }
-        .pro3{ @include bgimg('../img/market_main3.jpg'); }
-        // .pro4{ @include bgimg('../img/star_main.jpg'); }
-        .pro5{ @include bgimg('../img/design_main.jpg'); }
-
-        .sl{
-            width: 100%; height: 100vh;
-            position: relative;
-            display: flex;  align-items: center; justify-content: center; flex-shrink: 0;
-            &::before{
-                content: ''; display: block; width: 100%; height: 100vh;
-                position: absolute; left: 0; top: 0;
-                background-color: rgba(0,0,0,0.6);
+@media(max-width: $mobile){
+    .loading{
+        article{
+            h1{ @include font(40px,400);
+                -webkit-text-stroke: 1px white;
             }
-            > div{ width: 100%; height: 100vh;
-                video{ width: 100%; height: 100vh; object-fit: cover;}
-            }
-        }
-            
-        article{ position: absolute; left: 10%; bottom: 20%;
-            a{ 
-                @include font(70px, 400); color:white;
-                @extend %fontEn; line-height: 1;
-                &:hover{
-                    color: rgba(0,0,0,0);
-                    -webkit-text-stroke: 1.5px white;
-                    transition: .5s;
-                }
-            }
-            > span{ 
-                @include font(40px, 400); 
-                @extend %fontEn; line-height: 1; 
-                color: rgba(0,0,0,0);
-                -webkit-text-stroke: 2px white;
-                transition: .5s;
-                opacity: 0;
-            }
-            .timeBar{ 
-                width: 500px; height: 3px;
-                background-color: rgba(255,255,255,0.2);
-                position: relative; margin: 20px 0;
-                    span{ 
-                        display: block;
-                        width: 0; height: 3px;
-                        background-color: white;
-                    }
-            }
-            p:nth-of-type(1){ color: #aaa; font-style: italic; @include font(16px, 400); }
-            .tool{ 
-                height: 28px; overflow: hidden;
-                small{ color: white; display: block; margin: 5px 0;
-                    transition: .5s;
-                }
+            h3{ height: 40px; }
+            p{
+                @include font(18px,300);
+                margin-top: 20px;
             }
         }
     }
-
-    // ============================ 푸터 ================================================
-    // =================================================================================
-
-    footer{
-        width: 100%; height: 300px;  background: #111111;
-        > div{
-            width: 90%; height: 100%; margin: 0 auto;
-            @include flex();
-            .left{ @include flex(flex-end,flex-start);
-                p{ width: 62px; margin-right: 20px; img{width: 100%;}}
-                small{ margin-bottom: -30px; color:rgb(112, 112, 112); @include font( 16px, 300);}
-            }
-            .right{
-                div{ @include flex(); 
-                    span{
-                        display: block; height: 60px; overflow: hidden;
-                        @include flex(); flex-direction: column;
-                        a{
-                            @extend %fontEn;; transition: .5s;
-                            @include font(42px,400); color: white;
-                            &:nth-of-type(2){ color: $color;}
-                        }
-                        &:nth-of-type(2){  margin: 0 70px; }
-                    }
-                }
-                > p{
-                    width:100%; height: 2px; background: rgb(103, 103, 103);
-                    margin: 20px 0;
-                }
-                ul{ @include flex(); 
-                    li{
-                        span{display: block; color: rgb(103, 103, 103);
-                            @include font( 13px, 600); margin-bottom: 5px;
-                        }
-                        p{ color: white; @include font( 14px, 300);}
-                    }
-                    li:nth-of-type(3){ //sns 아이콘
-                        @include flex( flex-start, flex-start);
-                        a{ margin-right: 20px; width: 20px; height: 20px; display: block;
-                            &:nth-of-type(1){ 
-                                @include bgimg(); transition: .5s;
-                                &:hover{ @include bgimg('../img/icon_mail2.png'); }
-                            }
-                            &:nth-of-type(2){ 
-                                @include bgimg('../img/icon_git1.png'); transition: .5s;
-                                &:hover{ @include bgimg('../img/icon_git2.png');}
-                            }
-                            &:nth-of-type(3){ 
-                                @include bgimg('../img/icon_kakao1.png'); transition: .5s;
-                                &:hover{ @include bgimg('../img/icon_kakao2.png');}
-                            }
-                            &:nth-of-type(4){ 
-                                @include bgimg('../img/icon_insta1.png'); transition: .5s; margin-right: 0;
-                                &:hover{ @include bgimg('../img/icon_insta2.png');}
-                            }
-                            
-                        }
-                    }
-                    
-                }
+    .main{
+        flex-direction: column;
+        width: 90%; margin: 0 auto;
+        figure{
+            p{ width: 70%; margin: 0 auto;}
+            figcaption{ 
+                margin-top: 3vh;
+                // white-space: pre-line;
+                @include font(15px,300);
+                b{ @include font(15px,600)}
             }
         }
+        h2{
+            padding-top: 3vh;
+            p{ @include font(35px,200); 
+                b{ @include font(35px,500);}
+            }
+            .hello{ 
+                height: 40px;
+                ul li{  @include font(35px,500); }
+            }
+        }
+    }
+    .ps{
+        position: fixed; left: 5%; bottom: 3%;
+        @include font( 5px, 400);
+    }
+}
+
+@media(max-width: 320px){
+    .main h2{
+        p{ white-space: pre-line;}
     }
 }

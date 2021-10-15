@@ -1,5 +1,7 @@
 // 로딩 페이지
 const MAE = document.querySelector('.loading article h3')
+const mql = window.matchMedia("screen and (max-width: 1024px)");
+
 $(document).ready(function() {
 
     // good morning afternoon evening
@@ -40,7 +42,7 @@ $(document).ready(function() {
 // 메인 텍스트 ~~ 싶은 
 setInterval( () => {
     $('.hello ul').animate({
-       marginTop : -100
+       marginTop : -$('.hello').height()
     },() => {
         $('.hello ul li:nth-of-type(1)').appendTo('.hello ul');
         $('.hello ul').animate({
@@ -68,6 +70,7 @@ nav.innerHTML = asBtn;
 // 프로젝트 스크롤 이벤트
 $(window).on('mousewheel DOMMouseScroll',function(e){
     delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -40;
+    if( mql.matches ) return;
     clearTimeout(move);
     move = setTimeout(function(){
         if(delta < 0){

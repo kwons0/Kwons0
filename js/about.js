@@ -4,7 +4,15 @@ const sense = document.querySelector('.hello > div'),
     faceImg = document.querySelector('.face > figure');
 let delta, num = 0, move, timer;
 
+const mql = window.matchMedia("screen and (max-width: 1024px)");
 
+
+
+$(document).ready(function() {
+    if( mql.matches ){
+        $(faceImg).addClass('active');
+    }
+});
 
 
 // ~ typing animation
@@ -26,10 +34,9 @@ function typing(){
 } 
 
 
-
-
 // 얼굴 바꾸기
 $(document).scroll(function() {
+    if( mql.matches ) return;
     if( $(window).scrollTop() >= ($('.hello figure').offset().top)/2 ){
         $(fire).addClass('active');
         $(faceImg).addClass('active');
@@ -43,6 +50,7 @@ $(document).scroll(function() {
 
 // 스크롤 
 $(window).on('mousewheel DOMMouseScroll',function(e){
+    if( mql.matches ){return;}
     delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -40;
     clearTimeout(move);
     move = setTimeout(function(){

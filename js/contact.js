@@ -1,6 +1,21 @@
 let delta, num = 0, move, timer;
+const mql = window.matchMedia("screen and (max-width: 1024px)");
+
+$(document).on("touchstart",function(){
+  var scrollTop = $(window).scrollTop();
+
+  if( mql.matches ){
+    if( scrollTop > $('.submit').offset().top - 100){
+      $('.burger, .logo, .mail').addClass('black')
+    }else{
+      $('.burger, .logo, .mail').removeClass('black')
+    }
+  }
+});
+
 
 $(window).on('mousewheel DOMMouseScroll',function(e){
+  if( mql.matches ) return;
     delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -40;
     clearTimeout(move);
     move = setTimeout(function(){
@@ -51,6 +66,7 @@ function init(){
     },100)
 }
 init();
+
 
 
 // 폼 제출 알림 메시지

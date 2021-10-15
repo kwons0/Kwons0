@@ -17,10 +17,12 @@ $(function(){
             }
         })
 
-
+        const mql = window.matchMedia("screen and (max-width: 1280px)");
+        
         $('.menu > div span').on({
             mouseenter : function(){
-                $(this).children().css({ 'transform' : 'translateY(-110px)'})
+                if( mql.matches ) return;
+                $(this).children().css({ 'transform' : 'translateY('+ -$(this).height() +'px)'})
             },
             mouseleave : function(){
                 $(this).children().css({ 'transform' : 'translateY(0px)'})
