@@ -561,7 +561,7 @@ header {
 
 .mail {
   z-index: 25;
-  height: 55px;
+  height: auto;
   position: fixed;
   right: 5%;
   top: 140px;
@@ -815,7 +815,7 @@ header {
   }
   .mail {
     z-index: 20;
-    height: 55px;
+    height: auto;
     position: fixed;
     right: 5%;
     top: 85px;

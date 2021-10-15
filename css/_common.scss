@@ -313,7 +313,7 @@ header{ position: fixed; z-index: 30;
     }
 }
 
-.mail{ z-index: 25; height: 55px; 
+.mail{ z-index: 25; height: auto; 
     position: fixed; right: 5%; top: 140px;
     div{cursor: pointer;
         > a{ display: block; cursor: pointer;
@@ -436,7 +436,7 @@ header{ position: fixed; z-index: 30;
     }
 
 
-    .mail{ z-index: 20; height: 55px; 
+    .mail{ z-index: 20; height: auto;
         position: fixed; right: 5%; top: 85px;
         div > a{
             display: block; cursor: pointer;
