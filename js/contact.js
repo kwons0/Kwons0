@@ -1,177 +1,32 @@
-let delta, num = 0, move, timer;
-const mql = window.matchMedia("screen and (max-width: 1024px)");
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-$(document).on("touchstart",function(){
-  var scrollTop = $(window).scrollTop();
+/***/ "./src/js/contact.js":
+/*!***************************!*\
+  !*** ./src/js/contact.js ***!
+  \***************************/
+/***/ (() => {
 
-  if( mql.matches ){
-    if( scrollTop > $('.submit').offset().top - 100){
-      $('.burger, .logo, .mail').addClass('black')
-    }else{
-      $('.burger, .logo, .mail').removeClass('black')
-    }
-  }
-});
+eval("let delta, num = 0, move, timer;\nconst mql = window.matchMedia(\"screen and (max-width: 1024px)\");\n\n$(document).on(\"touchstart\",function(){\n  var scrollTop = $(window).scrollTop();\n\n  if( mql.matches ){\n    if( scrollTop > $('.submit').offset().top - 100){\n      $('.burger, .logo, .mail').addClass('black')\n    }else{\n      $('.burger, .logo, .mail').removeClass('black')\n    }\n  }\n});\n\n\n$(window).on('mousewheel DOMMouseScroll',function(e){\n  if( mql.matches ) return;\n    delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -40;\n    clearTimeout(move);\n    move = setTimeout(function(){\n      if(delta < 0){\n          if(num < 2) num++; //down\n      }else{\n          if(num > 0) num--;   //up\n      }\n      ani();\n\n      if(num > 0){\n          $('body').css({ 'background-color' : '#111111'})\n          $('.burger, .logo, .mail').addClass('black')\n      }else{\n          $('body').css({ 'background-color' : 'transparent'})\n          $('.burger, .logo, .mail').removeClass('black')\n      }\n\n      \n      clearTimeout(timer);\n\n      if( num !== 2 ){\n          $('.timebar span').removeClass('active');\n          $('.timebar span').css({ 'transition' : '0s','transition-delay' : '.5s'})\n      }else{\n          $('.timebar span').addClass('active')\n          $('.timebar span').css({ 'transition' : '8s','transition-delay' : '0s'})\n          timer = setTimeout(function(){\n              location.href = '../about.html'\n          },8000);\n      }\n        \n    },100);\n});\n\nfunction ani(){\n    $('html,body').animate({ \n        scrollTop : $(window).height() * num \n    });\n};\n\nfunction init(){\n    setTimeout(function(){\n        $('html,body').scrollTop(0);\n        $('body').css({ 'background-color' : 'transparent'})\n        $('.burger, .logo, .mail').removeClass('black')\n        num=0;\n    },100)\n}\ninit();\n\n\n\n// 폼 제출 알림 메시지\n(function() {\n    // get all data in form and return object\n    function getFormData(form) {\n      var elements = form.elements;\n      var honeypot;\n  \n      var fields = Object.keys(elements).filter(function(k) {\n        if (elements[k].name === \"honeypot\") {\n          honeypot = elements[k].value;\n          return false;\n        }\n        return true;\n      }).map(function(k) {\n        if(elements[k].name !== undefined) {\n          return elements[k].name;\n        // special case for Edge's html collection\n        }else if(elements[k].length > 0){\n          return elements[k].item(0).name;\n        }\n      }).filter(function(item, pos, self) {\n        return self.indexOf(item) == pos && item;\n      });\n  \n      var formData = {};\n      fields.forEach(function(name){\n        var element = elements[name];\n        \n        // singular form elements just have one value\n        formData[name] = element.value;\n  \n        // when our element has multiple items, get their values\n        if (element.length) {\n          var data = [];\n          for (var i = 0; i < element.length; i++) {\n            var item = element.item(i);\n            if (item.checked || item.selected) {\n              data.push(item.value);\n            }\n          }\n          formData[name] = data.join(', ');\n        }\n      });\n  \n      // add form-specific values into the data\n      formData.formDataNameOrder = JSON.stringify(fields);\n      formData.formGoogleSheetName = form.dataset.sheet || \"responses\"; // default sheet name\n      formData.formGoogleSendEmail\n        = form.dataset.email || \"\"; // no email by default\n  \n      return {data: formData, honeypot: honeypot};\n    }\n  \n    function handleFormSubmit(event) {  // handles form submit without any jquery\n      event.preventDefault();           // we are submitting via xhr below\n      var form = event.target;\n      var formData = getFormData(form);\n      var data = formData.data;\n  \n      // If a honeypot field is filled, assume it was done so by a spam bot.\n      if (formData.honeypot) {\n        return false;\n      }\n  \n      disableAllButtons(form);\n      var url = form.action;\n      var xhr = new XMLHttpRequest();\n      xhr.open('POST', url);\n      // xhr.withCredentials = true;\n      xhr.setRequestHeader(\"Content-Type\", \"application/x-www-form-urlencoded\");\n      xhr.onreadystatechange = function() {\n          if (xhr.readyState === 4 && xhr.status === 200) {\n            form.reset();\n            var formElements = form.querySelector(\".form-elements\")\n            if (formElements) {\n              formElements.style.display = \"none\"; // hide form\n            }\n            var thankYouMessage = form.querySelector(\".thankyou_message\");\n            if (thankYouMessage) {\n                alert( $('.thankyou_message').text() )\n            }\n          }\n      };\n      // url encode form data for sending as post data\n      var encoded = Object.keys(data).map(function(k) {\n          return encodeURIComponent(k) + \"=\" + encodeURIComponent(data[k]);\n      }).join('&');\n      xhr.send(encoded);\n    }\n    \n    function loaded() {\n      // bind to the submit event of our form\n      var forms = document.querySelectorAll(\"form.gform\");\n      for (var i = 0; i < forms.length; i++) {\n        forms[i].addEventListener(\"submit\", handleFormSubmit, false);\n      }\n    };\n    document.addEventListener(\"DOMContentLoaded\", loaded, false);\n  \n    function disableAllButtons(form) {\n      var buttons = form.querySelectorAll(\"button\");\n      for (var i = 0; i < buttons.length; i++) {\n        buttons[i].disabled = true;\n      }\n    }\n  })();\n\n\n//# sourceURL=webpack://kwons0pack/./src/js/contact.js?");
 
+/***/ })
 
-$(window).on('mousewheel DOMMouseScroll',function(e){
-  if( mql.matches ) return;
-    delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -40;
-    clearTimeout(move);
-    move = setTimeout(function(){
-      if(delta < 0){
-          if(num < 2) num++; //down
-      }else{
-          if(num > 0) num--;   //up
-      }
-      ani();
-
-      if(num > 0){
-          $('body').css({ 'background-color' : '#111111'})
-          $('.burger, .logo, .mail').addClass('black')
-      }else{
-          $('body').css({ 'background-color' : 'transparent'})
-          $('.burger, .logo, .mail').removeClass('black')
-      }
-
-      
-      clearTimeout(timer);
-
-      if( num !== 2 ){
-          $('.timebar span').removeClass('active');
-          $('.timebar span').css({ 'transition' : '0s','transition-delay' : '.5s'})
-      }else{
-          $('.timebar span').addClass('active')
-          $('.timebar span').css({ 'transition' : '8s','transition-delay' : '0s'})
-          timer = setTimeout(function(){
-              location.href = '../about.html'
-          },8000);
-      }
-        
-    },100);
-});
-
-function ani(){
-    $('html,body').animate({ 
-        scrollTop : $(window).height() * num 
-    });
-};
-
-function init(){
-    setTimeout(function(){
-        $('html,body').scrollTop(0);
-        $('body').css({ 'background-color' : 'transparent'})
-        $('.burger, .logo, .mail').removeClass('black')
-        num=0;
-    },100)
-}
-init();
-
-
-
-// 폼 제출 알림 메시지
-(function() {
-    // get all data in form and return object
-    function getFormData(form) {
-      var elements = form.elements;
-      var honeypot;
-  
-      var fields = Object.keys(elements).filter(function(k) {
-        if (elements[k].name === "honeypot") {
-          honeypot = elements[k].value;
-          return false;
-        }
-        return true;
-      }).map(function(k) {
-        if(elements[k].name !== undefined) {
-          return elements[k].name;
-        // special case for Edge's html collection
-        }else if(elements[k].length > 0){
-          return elements[k].item(0).name;
-        }
-      }).filter(function(item, pos, self) {
-        return self.indexOf(item) == pos && item;
-      });
-  
-      var formData = {};
-      fields.forEach(function(name){
-        var element = elements[name];
-        
-        // singular form elements just have one value
-        formData[name] = element.value;
-  
-        // when our element has multiple items, get their values
-        if (element.length) {
-          var data = [];
-          for (var i = 0; i < element.length; i++) {
-            var item = element.item(i);
-            if (item.checked || item.selected) {
-              data.push(item.value);
-            }
-          }
-          formData[name] = data.join(', ');
-        }
-      });
-  
-      // add form-specific values into the data
-      formData.formDataNameOrder = JSON.stringify(fields);
-      formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-      formData.formGoogleSendEmail
-        = form.dataset.email || ""; // no email by default
-  
-      return {data: formData, honeypot: honeypot};
-    }
-  
-    function handleFormSubmit(event) {  // handles form submit without any jquery
-      event.preventDefault();           // we are submitting via xhr below
-      var form = event.target;
-      var formData = getFormData(form);
-      var data = formData.data;
-  
-      // If a honeypot field is filled, assume it was done so by a spam bot.
-      if (formData.honeypot) {
-        return false;
-      }
-  
-      disableAllButtons(form);
-      var url = form.action;
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', url);
-      // xhr.withCredentials = true;
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            form.reset();
-            var formElements = form.querySelector(".form-elements")
-            if (formElements) {
-              formElements.style.display = "none"; // hide form
-            }
-            var thankYouMessage = form.querySelector(".thankyou_message");
-            if (thankYouMessage) {
-                alert( $('.thankyou_message').text() )
-            }
-          }
-      };
-      // url encode form data for sending as post data
-      var encoded = Object.keys(data).map(function(k) {
-          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-      }).join('&');
-      xhr.send(encoded);
-    }
-    
-    function loaded() {
-      // bind to the submit event of our form
-      var forms = document.querySelectorAll("form.gform");
-      for (var i = 0; i < forms.length; i++) {
-        forms[i].addEventListener("submit", handleFormSubmit, false);
-      }
-    };
-    document.addEventListener("DOMContentLoaded", loaded, false);
-  
-    function disableAllButtons(form) {
-      var buttons = form.querySelectorAll("button");
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = true;
-      }
-    }
-  })();
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/js/contact.js"]();
+/******/ 	
+/******/ })()
+;
