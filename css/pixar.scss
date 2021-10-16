@@ -197,10 +197,11 @@ footer{
         }
     }
     .row1{
+        .line1 .contit{ padding-top: 20px; }
         .line2{ //제이슨
             padding-top: 80px;
-            div:nth-of-type(1){  height: 300px;
-            }
+            div:nth-of-type(1){  height: 300px;}
+            .contit{ padding-top: 20px; }
         }
     }
     .row2{
@@ -296,7 +297,7 @@ footer{
         }
         .line2{ //제이슨
             padding-top: 60px;
-            div:nth-of-type(1){ height: 200px; }
+            div:nth-of-type(1){ height: 200px; background-size: contain; }
             .contit{ padding-top: 20px;
                 h2{ white-space: nowrap;}
                 p{ padding-top: 10px;}

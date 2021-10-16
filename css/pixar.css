@@ -1685,11 +1685,17 @@ footer a article .timebar span.active {
     width: 45%;
     margin-right: 0;
   }
+  .row1 .line1 .contit {
+    padding-top: 20px;
+  }
   .row1 .line2 {
     padding-top: 80px;
   }
   .row1 .line2 div:nth-of-type(1) {
     height: 300px;
+  }
+  .row1 .line2 .contit {
+    padding-top: 20px;
   }
   .row2 .line3 {
     width: 100%;
@@ -1895,6 +1901,7 @@ footer a article .timebar span.active {
   }
   .row1 .line2 div:nth-of-type(1) {
     height: 200px;
+    background-size: contain;
   }
   .row1 .line2 .contit {
     padding-top: 20px;
