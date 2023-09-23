@@ -20,7 +20,7 @@ I’d love to work with your company someday.  👥 🌎 🌍 🌏<br/>
 <br/>
 Feel free to contact me if you are interested in working with me!<br/>
 I look forward to hearing from you! 💥
-<br/>
+<br/><br/>
 
 <div>
 <a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>&nbsp;
