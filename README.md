@@ -9,15 +9,19 @@
 <br/>
 
 👋&nbsp;&nbsp;Hi there How is it going?<br/>
-I'm front-end developer. 🛠👩🏻‍💻
+I'm front-end developer. 🛠👩🏻‍💻
 <br/><br/>
-I've worked as a web designer from 2019 to 2021.<br/>
-I think that the developers who knows how to design have an infinite possibilities! 🔥🎨
+I worked as a web designer from 2019 to 2021,<br/>
+and I have been working as a web front-end developer in ther e-commerce field since 2022!<br/>
+I am also very interested in UI/UX and would like to try my hand at app development!<br/>
 <br/><br/>
-I’d love to work with your company oneday.&nbsp;&nbsp;👥 🌎 🌍 🌏<br/>
-Feel free to contact me if you're interested in working with me!<br/>
-I look forward to hearing from you! 💥
+I think that the developers who knows how to design have an infinite possibilities! 🔥🎨<br/>
+I’d love to work with your company someday.  👥 🌎 🌍 🌏<br/>
+<br/><br/>
+Feel free to contact me if you are interested in working with me!<br/>
+I look forward to hearing from you! 💥
 <br/>
+
 <div>
 <a href="mailto:kwonsy11289@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>&nbsp;
 <a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Kakao-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>&nbsp;
