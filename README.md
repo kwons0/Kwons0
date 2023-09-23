@@ -9,15 +9,15 @@
 <br/>
 
 👋&nbsp;&nbsp;Hi there How is it going?<br/>
-I'm front-end developer. 🛠👩🏻‍💻
-<br/><br/>
+I'm front-end developer. 🛠👩🏻‍💻<br/>
+<br/>
 I worked as a web designer from 2019 to 2021,<br/>
 and I have been working as a web front-end developer in ther e-commerce field since 2022!<br/>
 I am also very interested in UI/UX and would like to try my hand at app development!<br/>
-<br/><br/>
+<br/>
 I think that the developers who knows how to design have an infinite possibilities! 🔥🎨<br/>
 I’d love to work with your company someday.  👥 🌎 🌍 🌏<br/>
-<br/><br/>
+<br/>
 Feel free to contact me if you are interested in working with me!<br/>
 I look forward to hearing from you! 💥
 <br/>
