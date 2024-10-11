@@ -4,11 +4,11 @@
 	
   </div>
 <h2> Welcome to my GitHub! <br/>
-	It’s great to meet you&nbsp;&nbsp;🙏&nbsp;&nbsp;🌷
+It’s great to meet you
 </h2>
 <br/>
 
-👋&nbsp;&nbsp;Hi, I'm Seoyoung Kwon, a front-end developer :-)
+Hi, I'm Seoyoung Kwon, a front-end developer :-)
 <br/>
 I worked as a web designer from 2019 to 2021,<br/>
 and since 2022, I've been working as a web front-end developer in the e-commerce field!<br/>
@@ -18,7 +18,7 @@ and I would like to try my hand at app development as well as web!<br/>
 I believe that developers who can not only distinguish good design but also implement it have endless possibilities. 🫡👊 <br/>
 <br/>
 If you are interested in me, please feel free to contact me!<br/>
-I look forward to hearing from you! 💥
+I look forward to hearing from you!
 <br/><br/>
 
 <div>
