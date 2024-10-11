@@ -8,18 +8,17 @@
 </h2>
 <br/>
 
-👋&nbsp;&nbsp;Hi there How is it going?<br/>
-I'm front-end developer. 🛠👩🏻‍💻<br/>
+👋&nbsp;&nbsp;Hi, I'm Seoyoung Kwon, a front-end developer :-)
 <br/>
 I worked as a web designer from 2019 to 2021,<br/>
-and I have been working as a web front-end developer in ther e-commerce field since 2022!<br/>
-I am also very interested in UI/UX and would like to try my hand at app development!<br/>
+and since 2022, I've been working as a web front-end developer in the e-commerce field!<br/>
 <br/>
-I think that the developers who knows how to design have an infinite possibilities! 🔥🎨<br/>
-I’d love to work with your company someday.  👥 🌎 🌍 🌏<br/>
+Based on my experience as a designer, I am currently very interested in UI/UX design,<br/>
+and I would like to try my hand at app development as well as web!<br/>
+I believe that developers who can not only distinguish good design but also implement it have endless possibilities. 🫡👊 <br/>
 <br/>
-Feel free to contact me if you are interested in working with me!<br/>
-I look forward to hearing from you! 💥
+If you are interested in me, please feel free to contact me!<br/>
+I look forward to hearing from you! 💥
 <br/><br/>
 
 <div>
