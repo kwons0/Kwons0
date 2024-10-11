@@ -8,21 +8,17 @@ It’s great to meet you
 </h2>
 <br/>
 
-Hi, I'm Seoyoung Kwon, a front-end developer :-)
+Hi, I'm Seoyoung Kwon, a front-end developer!<br/>
 <br/>
-I worked as a web designer from 2019 to 2021,<br/>
-and since 2022, I've been working as a web front-end developer in the e-commerce field!<br/>
+I worked as a web designer from 2019 to 2021, and since 2022, I've been working as a front-end developer in the e-commerce field. <br/>
+With my background in design, I’ve developed a strong interest in UI/UX design and am eager to expand my skills to app development as well as web development.<br/>
+I believe that developers who can not only recognize great design but also bring it to life have limitless potential.<br/>
 <br/>
-Based on my experience as a designer, I am currently very interested in UI/UX design,<br/>
-and I would like to try my hand at app development as well as web!<br/>
-I believe that developers who can not only distinguish good design but also implement it have endless possibilities. 🫡👊 <br/>
-<br/>
-If you are interested in me, please feel free to contact me!<br/>
-I look forward to hearing from you!
+If you're interested in connecting with me, feel free to reach out! I look forward to hearing from you.
 <br/><br/>
 
 <div>
-<a href="mailto:kwons0128@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwonsy11289@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>&nbsp;
+<a href="mailto:kwons0128@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwons0128@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>&nbsp;
 <a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Kakao-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>&nbsp;
 <a href="https://www.instagram.com/kwons0/" target="_blank"><img src="http://img.shields.io/badge/-Kwons0-E4405F?style=flat-square&logo=Instagram&logoColor=white"/></a><br/>
 </div>
