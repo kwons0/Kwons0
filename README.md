@@ -19,7 +19,6 @@ If you're interested in connecting with me, feel free to reach out! I look forwa
 
 <div>
 <a href="mailto:kwons0128@gmail.com" target="_blank"><img src="http://img.shields.io/badge/-kwons0128@gmail.com-EA4335?style=flat-square&logo=Gmail&logoColor=white"/></a>&nbsp;
-<a href="https://open.kakao.com/o/s4to6mEd" target="_blank"><img src="http://img.shields.io/badge/-Kakao-FFCD00?style=flat-square&logo=KakaoTalk&logoColor=333"/></a>&nbsp;
 <a href="https://www.instagram.com/kwons0/" target="_blank"><img src="http://img.shields.io/badge/-Kwons0-E4405F?style=flat-square&logo=Instagram&logoColor=white"/></a><br/>
 </div>
 
